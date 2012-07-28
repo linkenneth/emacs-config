@@ -1,0 +1,195 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.8.29)  7 JUN 2012 18:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**refcard
+(./refcard.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(/hg/s/linux/9/app/teTeX/07.11/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/hg/s/linux/9/app/teTeX/07.11/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/hg/s/linux/9/app/teTeX/07.11/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
+\c@tracingmulticols=\count87
+\mult@box=\box26
+\multicol@leftmargin=\dimen103
+\c@unbalance=\count88
+\c@collectmore=\count89
+\doublecol@number=\count90
+\multicoltolerance=\count91
+\multicolpretolerance=\count92
+\full@width=\dimen104
+\page@free=\dimen105
+\premulticols=\dimen106
+\postmulticols=\dimen107
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box27
+\last@line=\box28
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count93
+\c@finalcolumnbadness=\count94
+\last@try=\dimen108
+\multicolovershoot=\dimen109
+\multicolundershoot=\dimen110
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+)
+(/u/sfs/tex/tex/latex/parskip.sty)
+(/hg/s/linux/9/app/teTeX/07.11/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks14
+\verbatim@line=\toks15
+\verbatim@in@stream=\read1
+)
+(/hg/s/linux/9/app/teTeX/07.11/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip45
+)
+(/hg/s/linux/9/app/teTeX/07.11/texmf-dist/tex/latex/svn/svn.sty
+Package: svn 2007/09/25 r43 Typeset Subversion keywords.
+)
+No file refcard.aux.
+\openout1 = `refcard.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 59.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 59.
+
+Overfull \hbox (16.01297pt too wide) in paragraph at lines 59--70
+[][] 
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 71.
+
+Overfull \hbox (3.54077pt too wide) in paragraph at lines 71--88
+[] 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 99.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 99.
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--112
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 145
+.
+(/u/sfs/tex/tex/latex/R_latex/omscmtt.fd
+File: omscmtt.fd 
+)
+LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 145.
+
+Overfull \hbox (1.23515pt too wide) in paragraph at lines 143--155
+[][] 
+ []
+
+
+Overfull \hbox (14.05339pt too wide) in paragraph at lines 156--172
+[]$[]$ 
+ []
+
+
+Overfull \hbox (21.06624pt too wide) in paragraph at lines 156--172
+[] 
+ []
+
+[1
+
+{/hg/s/linux/9/app/teTeX/07.11/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [
+2] (./refcard.aux) ) 
+Here is how much of TeX's memory you used:
+ 441 strings out of 493633
+ 5841 string characters out of 3140890
+ 97228 words of memory out of 3000000
+ 3790 multiletter control sequences out of 15000+200000
+ 8492 words of font info for 31 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 23i,12n,17p,170b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
+</hg/s/linux/9/app/teTeX/07.11/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx10.pfb></hg/s/linux/9/app/teTeX/07.11/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx12.pfb></hg/s/linux/9/app/teTeX/07.11/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx9.pfb></hg/s/linux/9/app/teTeX/07.11/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmbxti10.pfb></hg/s/linux/9/app/teTeX/07.11/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></hg/s/linux/9/app/teTeX/07.11/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></hg/s/linux/9/app/teTeX/07
+.11/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></hg/s/linux/9/app/teTe
+X/07.11/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></hg/s/linux/9/app/
+teTeX/07.11/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></hg/s/linux/9/
+app/teTeX/07.11/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></hg/s/linux
+/9/app/teTeX/07.11/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></hg/s/li
+nux/9/app/teTeX/07.11/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></hg
+/s/linux/9/app/teTeX/07.11/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+></hg/s/linux/9/app/teTeX/07.11/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
+0.pfb></hg/s/linux/9/app/teTeX/07.11/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt8.pfb></hg/s/linux/9/app/teTeX/07.11/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt9.pfb>
+Output written on refcard.pdf (2 pages, 171394 bytes).
+PDF statistics:
+ 75 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

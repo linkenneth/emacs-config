@@ -1,0 +1,4 @@
+# name: my email
+# key: myemail
+# --
+`(replace-regexp-in-string "@" "@NOSPAM." user-mail-address)`
