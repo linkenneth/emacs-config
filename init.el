@@ -64,6 +64,9 @@
 ; Ruby mode
 (load "ruby-config.el")
 
+; Java mode
+(load "java-config.el")
+
 ; Emacs Speaks Statistics (ESS mode)
 (load "ess-config.el")
 
