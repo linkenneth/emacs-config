@@ -7,5 +7,5 @@
 (setq org-log-done t)
 
 ;; Agenda Files
-(setq org-agenda-files (list "C:/Users/kenneth.lin/Org/want.org"
-			     "C:/Users/kenneth.lin/Org/need.org"))
+(setq org-agenda-files (list "/media/Everything/Users/kenneth.lin/Org/want.org"
+			     "/media/Everything/Users/kenneth.lin/Org/need.org"))

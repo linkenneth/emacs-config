@@ -43,3 +43,7 @@
 ; Don't ask for killing server buffers and processes (like shells)
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 (remove-hook 'kill-buffer-query-functions 'process-kill-buffer-query-function)
+
+; Enable a backtrace when a problem occurs
+(setq debug-on-error t)
+

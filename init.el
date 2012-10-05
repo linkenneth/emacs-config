@@ -40,6 +40,18 @@
 
 (load "ac-config.el")
 
+;;;;;;;;;;;;;;;;;;
+;; Flymake Mode ;;
+;;;;;;;;;;;;;;;;;;
+
+(load "flymake-config.el")
+
+;;;;;;;;;;;
+;; CEDET ;;
+;;;;;;;;;;;
+
+(load "cedet-config.el")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Elisp Integration into Editing ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -69,6 +81,9 @@
 
 ; Emacs Speaks Statistics (ESS mode)
 (load "ess-config.el")
+
+; Javascript mode
+(load "js-config.el")
 
 ;;;;;;;;;;;;;
 ;; Keymaps ;;

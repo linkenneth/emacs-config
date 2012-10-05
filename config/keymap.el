@@ -38,6 +38,18 @@
 (define-key evil-insert-state-map "\C-e" 'evil-undefine)
 (define-key evil-motion-state-map "\C-e" 'evil-undefine)
 
+;;;;; FLYMAKE ;;;;;
+(defun flymake-goto-prev-error-and-display ()
+  (interactive)
+  (flymake-goto-prev-error)
+  (credmp/flymake-display-err-minibuf))
+(defun flymake-goto-next-error-and-display ()
+  (interactive)
+  (flymake-goto-next-error)
+  (credmp/flymake-display-err-minibuf))
+(global-set-key (kbd "<f9>") 'flymake-goto-prev-error-and-display)
+(global-set-key (kbd "<f10>") 'flymake-goto-next-error-and-display)
+
 ;;;;; ELISP INTEGRATION ;;;;;
 (global-set-key (kbd "<f12>") 'eval-and-replace-sexp-at-point)
 
