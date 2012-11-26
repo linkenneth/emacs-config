@@ -3,7 +3,7 @@
 ;; Copyright (C) 2002, 2003, 2004 David Ponce
 
 ;; Author: Kenneth Lin <link@nietzsche>
-;; Created: 2012-10-05 00:04:55-0700
+;; Created: 2012-11-19 14:43:06-0800
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

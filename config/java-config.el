@@ -18,9 +18,12 @@
 	     auto-mode-alist)))
   (require 'jde))
 
-(setq jde-jdk-registry '(("1.6.0" . "/usr/lib/jvm/java-1.6.0-openjdk-amd64/")))
+(setq jde-jdk-registry '(("1.7.0_09" . "/usr/lib/jvm/java-7-openjdk-amd64")))
 
 ; Flymake for Java
 (require 'jde-eclipse-compiler-server)
 (add-hook 'jde-mode-hook 'flymake-mode-on)
+
+(setq jde-sourcepath '("." ".."))
+(setq jde-compiler '(("eclipse java compiler server" "/usr/share/java/ecj.jar")))
 

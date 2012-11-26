@@ -3,7 +3,7 @@
 ;;; Copyright (C) 2007 Daniel Debertin (debertin@gmail.com)
 
 ;; Author: Kenneth Lin <link@nietzsche>
-;; Created: 2012-10-05 00:05:30-0700
+;; Created: 2012-11-19 14:43:31-0800
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

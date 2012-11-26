@@ -3,7 +3,7 @@
 ;; Copyright (C) 2002, 2003, 2004, 2007 Richard Kim
 
 ;; Author: Kenneth Lin <link@nietzsche>
-;; Created: 2012-10-05 00:05:06-0700
+;; Created: 2012-11-19 14:43:14-0800
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

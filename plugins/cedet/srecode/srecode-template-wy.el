@@ -3,7 +3,7 @@
 ;; Copyright (C) 2005, 2007, 2008, 2009, 2010 Eric M. Ludlam
 
 ;; Author: Kenneth Lin <link@nietzsche>
-;; Created: 2012-10-05 00:05:15-0700
+;; Created: 2012-11-19 14:43:20-0800
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 
