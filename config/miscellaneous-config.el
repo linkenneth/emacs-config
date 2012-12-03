@@ -44,6 +44,5 @@
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 (remove-hook 'kill-buffer-query-functions 'process-kill-buffer-query-function)
 
-; Enable a backtrace when a problem occurs
-(setq debug-on-error t)
-
+; Sets default font to "Ubuntu Mono" at size 12
+(add-to-list 'default-frame-alist '(font . "Ubuntu Mono-12"))
