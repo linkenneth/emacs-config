@@ -62,10 +62,11 @@
 ;; Various major modes ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Markup modes
+;; Markup modes
 (load "tex-config.el")
 (load "org-config.el")
 (load "text-mode-config.el")
+(load "jade-config.el")
 
 ; C-family modes
 (load "c-family-config.el")
@@ -84,6 +85,9 @@
 
 ; Javascript mode
 (load "js-config.el")
+
+; nXhtml mode
+(load "nxhtml-config.el")
 
 ;;;;;;;;;;;;;
 ;; Keymaps ;;

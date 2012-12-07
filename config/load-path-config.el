@@ -43,3 +43,15 @@
 
 (add-to-list 'load-path "~/.emacs.d/plugins/jdee/lisp")
 
+;;;;;;;;;;;;;;;;;
+;; nXhtml Path ;;
+;;;;;;;;;;;;;;;;;
+
+;; Not necessary
+;; (add-to-list 'load-path "~/.emacs.d/plugins/nxhtml")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Jade Mode (HTML Markup) Path ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path "~/.emacs.d/plugins/jade-mode")
