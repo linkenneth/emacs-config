@@ -30,6 +30,10 @@
  (let (evil-mode-map-alist)
    (call-interactively (key-binding (this-command-keys)))))
 
+; Evil numbers
+(define-key evil-normal-state-map (kbd "z u") 'evil-numbers/inc-at-pt)
+(define-key evil-normal-state-map (kbd "z d") 'evil-numbers/dec-at-pt)
+
 ; C-y for paste/yank like normal
 (define-key evil-insert-state-map "\C-y" 'evil-undefine)
 (define-key evil-motion-state-map "\C-y" 'evil-undefine)

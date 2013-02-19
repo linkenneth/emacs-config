@@ -11,6 +11,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/plugins/evil")
 (add-to-list 'load-path "~/.emacs.d/plugins/evil/evil-surround")
+(add-to-list 'load-path "~/.emacs.d/plugins/evil/evil-numbers")
 
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; AutoComplete Path ;;

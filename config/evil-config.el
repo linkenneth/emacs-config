@@ -8,6 +8,9 @@
 (require 'surround)
 (global-surround-mode 1)
 
+; Evil-numbers
+(require 'evil-numbers)
+
 ; End of line visual selection to not include EOL character
 (setq evil-want-visual-char-semi-exclusive t)
 
