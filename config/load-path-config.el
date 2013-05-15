@@ -56,3 +56,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (add-to-list 'load-path "~/.emacs.d/plugins/jade-mode")
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scala Mode Path ;;
+;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path "~/.emacs.d/plugins/scala-mode")

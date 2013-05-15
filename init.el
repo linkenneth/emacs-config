@@ -74,6 +74,9 @@
 ; Python mode
 (load "python-config.el")
 
+; Cython mode
+(load "cython-config.el")
+
 ; Ruby mode
 (load "ruby-config.el")
 
@@ -88,6 +91,9 @@
 
 ; nXhtml mode
 (load "nxhtml-config.el")
+
+; Scala mode
+(load "scala-config.el")
 
 ;;;;;;;;;;;;;
 ;; Keymaps ;;
