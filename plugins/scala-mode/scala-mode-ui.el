@@ -126,17 +126,18 @@
     map))
 
 (scala-mode-lib:define-keys scala-mode-map
+			    ;; Commented out unnecessary shortcuts
 
    ;; Attach Menubar
    ([menu-bar] scala-mode-menu-bar-map)
 
    ;; Attach keyboard Shortcuts
    ([(control tab)]            'scala-undent-line)
-   ([backspace]                'backward-delete-char-untabify)
+   ;; ([backspace]                'backward-delete-char-untabify)
    		                
-   ("\r"                       'scala-newline)
+   ;; ("\r"                       'scala-newline)
 
-   ([f1]                       'speedbar-get-focus)
+   ;; ([f1]                       'speedbar-get-focus)
 			        
    ([(control c)(control l)]   'scala-load-file)
    ([(control c)(control r)]   'scala-eval-region)
@@ -144,7 +145,7 @@
 			        
    ([(control c)(control c)]   'comment-region)
 
-   ("}"                        'scala-electric-brace)
+   ;; ("}"                        'scala-electric-brace)
 
    ((scala-mode-ui:key "t n")  'scala-mode-feature-tags-create)
    ((scala-mode-ui:key "t l")  'scala-mode-feature-tags-load)
