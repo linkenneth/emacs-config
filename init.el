@@ -80,6 +80,9 @@
 ; Ruby mode
 (load "ruby-config.el")
 
+; Rails config
+(load "rails-config.el")
+
 ; Java mode
 (load "java-config.el")
 

@@ -16,5 +16,5 @@
                   'font-lock-beginning-of-syntax-function)))
 
 (add-hook 'after-change-major-mode-hook 'linum-on)
-;; Get proper syntax highlighting for html files
-(add-to-list 'auto-mode-alist '("\\.html\\'" . asp-html-mumamo-mode))
+;; ;; Get proper syntax highlighting for html files
+;; (add-to-list 'auto-mode-alist '("\\.html\\'" . asp-html-mumamo-mode))
