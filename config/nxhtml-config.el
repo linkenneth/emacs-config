@@ -16,5 +16,7 @@
                   'font-lock-beginning-of-syntax-function)))
 
 (add-hook 'after-change-major-mode-hook 'linum-on)
-;; ;; Get proper syntax highlighting for html files
-;; (add-to-list 'auto-mode-alist '("\\.html\\'" . asp-html-mumamo-mode))
+
+;; Normal nxhtml-mode bugged out so use this instead
+(add-to-list 'auto-mode-alist '("\\.html\\'" . eruby-nxhtml-mumamo-mode))
+(add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo-mode))
