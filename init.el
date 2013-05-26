@@ -67,6 +67,8 @@
 (load "org-config.el")
 (load "text-mode-config.el")
 (load "jade-stylus-config.el")
+(load "sass-config.el")
+(load "scss-config.el")
 
 ; C-family modes
 (load "c-family-config.el")

@@ -62,3 +62,11 @@
 ;;;;;;;;;;;;;;;;;;;;;
 
 (add-to-list 'load-path "~/.emacs.d/plugins/scala-mode")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; SASS, SCSS, and Haml Mode Path ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path "~/.emacs.d/plugins/sass-mode")
+(add-to-list 'load-path "~/.emacs.d/plugins/scss-mode")
+(add-to-list 'load-path "~/.emacs.d/plugins/haml-mode")

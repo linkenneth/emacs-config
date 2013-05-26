@@ -1,4 +1,8 @@
-((("eruby-nxhtml-mumamo-mode" .
+((("assets" .
+   [1 0 0 0 0 0])
+  ("config" .
+   [1 0 0 0 0 0])
+  ("eruby-nxhtml-mumamo-mode" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("buffer" .
    [2 0 0 0 0 0])
@@ -1355,7 +1359,7 @@
   ("1000" .
    [5 0 0 0])
   ("s" .
-   [23])
+   [24])
   ("function" .
    [15 0 0 0 0 0 0 0])
   ("field-end" .
@@ -1913,7 +1917,7 @@
   ("reindent-then-newline-and-indent" .
    [0 0 0 0 0 0 0 0 2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("true" .
-   [5 0 0 1])
+   [6 0 0 1])
   ("getc" .
    [1 0 0 0])
   ("gets" .
