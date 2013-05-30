@@ -100,6 +100,12 @@
 ; Scala mode
 (load "scala-config.el")
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Various OS-specific Configs ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(load "mac-config.el")
+
 ;;;;;;;;;;;;;
 ;; Keymaps ;;
 ;;;;;;;;;;;;;
