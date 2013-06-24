@@ -385,9 +385,7 @@ function displays an error message."
 error if it cannot find the jar."
   (let ((tools
 	 (expand-file-name
-	  (if (eq system-type 'darwin)
-	      "Classes/classes.jar"
-	    "lib/tools.jar")
+	  "lib/tools.jar"
 	  (jde-get-jdk-dir))))
     (if (file-exists-p tools)
 	tools

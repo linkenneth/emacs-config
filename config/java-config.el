@@ -18,7 +18,9 @@
 	     auto-mode-alist)))
   (require 'jde))
 
-(setq jde-jdk-registry '(("1.7.0_09" . "/usr/lib/jvm/java-7-openjdk-amd64")))
+;(setq jde-jdk-registry '(("1.7.0_09" . "/usr/lib/jvm/java-openjdk-7-amd64")))
+; Backtick instead of quote to allow comma to force evaluation
+(setq jde-jdk-registry `(("1.7.0_25" . ,(getenv "JAVA_HOME"))))
 
 ; Flymake for Java
 (require 'jde-eclipse-compiler-server)
