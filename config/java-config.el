@@ -3,7 +3,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;
 
 (add-hook 'java-mode-hook (lambda ()
-			    (setq indent-tabs-mode nil)))
+			    (setq indent-tabs-mode nil)
+			    (setq c-basic-offset 2)
+			    ))
 
 ;; JDEE ;;
 ; Defers loading JDE until a java file is opened
@@ -26,6 +28,6 @@
 (require 'jde-eclipse-compiler-server)
 (add-hook 'jde-mode-hook 'flymake-mode-on)
 
-(setq jde-sourcepath '("." ".."))
+;; (setq jde-sourcepath (sourcepath-colon-path (getenv "PATH")))
+(setq jde-sourcepath nil)
 (setq jde-compiler '(("eclipse java compiler server" "/usr/share/java/ecj.jar")))
-

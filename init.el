@@ -58,6 +58,12 @@
 
 (load "elisp-integration-config.el")
 
+;;;;;;;;;;;;;;;;;;;;;;
+;; Multiple Cursors ;;
+;;;;;;;;;;;;;;;;;;;;;;
+
+(load "multiple-cursors-config.el")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Various major modes ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;

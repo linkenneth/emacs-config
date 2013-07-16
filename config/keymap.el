@@ -62,3 +62,10 @@
   (define-key ruby-mode-map "\C-c\C-c" 'ruby-send-definition-and-go)
   (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent))
 (add-hook 'ruby-mode-hook 'ruby-keys-setup)
+
+;;;;; MULTIPLE-CURSORS ;;;;;
+; TODO:
+(define-key evil-normal-state-map (kbd "\C-m e") 'mc/edit-lines)
+(define-key evil-normal-state-map (kbd "\C-m >") 'mc/mark-next-like-this)
+(define-key evil-normal-state-map (kbd "\C-m <") 'mc/mark-previous-like-this)
+(define-key evil-normal-state-map (kbd "\C-m a") 'mc/mark-all-like-this)

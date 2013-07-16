@@ -62,3 +62,9 @@
 ;;;;;;;;;;;;;;;;;;;;;
 
 (add-to-list 'load-path "~/.emacs.d/plugins/scala-mode")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Multiple Cursors Path ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path "~/.emacs.d/plugins/multiple-cursors")
