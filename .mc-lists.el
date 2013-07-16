@@ -5,11 +5,16 @@
       '(
 	cofi/maybe-exit
 	evil-append-line
+	evil-backward-char
+	evil-backward-word-begin
 	evil-change
 	evil-delete
 	evil-delete-char
+	evil-delete-line
 	evil-find-char
 	evil-force-normal-state
+	evil-forward-char
+	evil-forward-word-begin
 	evil-insert
 	evil-next-line
 	evil-normal-state
@@ -19,4 +24,5 @@
 
 (setq mc/cmds-to-run-once
       '(
+	evil-goto-definition
 	))

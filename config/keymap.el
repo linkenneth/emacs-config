@@ -64,8 +64,11 @@
 (add-hook 'ruby-mode-hook 'ruby-keys-setup)
 
 ;;;;; MULTIPLE-CURSORS ;;;;;
-; TODO:
-(define-key evil-normal-state-map (kbd "\C-m e") 'mc/edit-lines)
-(define-key evil-normal-state-map (kbd "\C-m >") 'mc/mark-next-like-this)
-(define-key evil-normal-state-map (kbd "\C-m <") 'mc/mark-previous-like-this)
-(define-key evil-normal-state-map (kbd "\C-m a") 'mc/mark-all-like-this)
+(define-prefix-command 'mc-prefix-command)
+(global-set-key (kbd "C-l") 'mc-prefix-command)
+(global-set-key (kbd "C-l e") 'mc/edit-lines)
+(global-set-key (kbd "C-l i") 'mc/edit-beginnings-of-lines)
+(global-set-key (kbd "C-l a") 'mc/edit-ends-of-lines)
+(global-set-key (kbd "C-l f") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-l <") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-l C-a") 'mc/mark-all-like-this)
