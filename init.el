@@ -58,11 +58,11 @@
 
 (load "elisp-integration-config.el")
 
-;;;;;;;;;;;;;;;;;;;;;;
-;; Multiple Cursors ;;
-;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;; CamelScore ;;
+;;;;;;;;;;;;;;;;
 
-(load "multiple-cursors-config.el")
+(load "camel-score-config.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Various major modes ;;
