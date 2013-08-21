@@ -63,5 +63,11 @@
   (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent))
 (add-hook 'ruby-mode-hook 'ruby-keys-setup)
 
-;;;;; FIND-FILE-AT-POINT ;;;;;
+(global-set-key (kbd "C-c C--") 'dasherize-word-at-point)
+(global-set-key (kbd "C-c C-_") 'underscore-word-at-point)
+(global-set-key (kbd "C-c C-;") 'camelcase-word-at-point)
+(global-set-key (kbd "C-c C-:") 'colonize-word-at-point)
+
+;;;;; FINDING STUFF ;;;;;
 (global-set-key (kbd "C-x M-f") 'ffap)
+(global-set-key (kbd "<f8>") 'rgrep)
