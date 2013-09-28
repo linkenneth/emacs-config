@@ -11,6 +11,12 @@
 ; Evil-numbers
 (require 'evil-numbers)
 
+; Evil text object between
+(require 'evil-textobj-between)
+
+; Evil hexl-mode patch
+(require 'hexl-evil-patch)
+
 ; End of line visual selection to not include EOL character
 (setq evil-want-visual-char-semi-exclusive t)
 

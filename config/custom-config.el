@@ -13,4 +13,4 @@
  '(ido-only-match ((((class color)) (:foreground "yellow"))))
  '(ido-subdir ((((min-colors 88) (class color)) (:foreground "steelblue"))))
  '(preview-face ((((background dark)) (:background "dark slate gray"))))
- '(preview-reference-face ((t (:foreground "yellow2" :height 1.8)))))
+ '(preview-reference-face ((t (:foreground "yellow2" :height 1.0)))))
