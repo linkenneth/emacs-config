@@ -4,7 +4,7 @@
 
 (add-hook 'java-mode-hook (lambda ()
 			    (setq indent-tabs-mode nil)
-			    (setq c-basic-offset 2)
+			    (setq c-basic-offset 4)
 			    ))
 
 ;; JDEE ;;
@@ -20,9 +20,10 @@
 	     auto-mode-alist)))
   (require 'jde))
 
-;(setq jde-jdk-registry '(("1.7.0_09" . "/usr/lib/jvm/java-openjdk-7-amd64")))
 ; Backtick instead of quote to allow comma to force evaluation
-(setq jde-jdk-registry `(("1.7.0_25" . ,(getenv "JAVA_HOME"))))
+;; (setq jde-jdk-registry '(("1.7.0_09" . "/usr/lib/jvm/java-openjdk-7-amd64")))
+;; (setq jde-jdk-registry `(("1.6.0_65" . ,(getenv "JAVA_HOME"))))
+(setq jde-jdk-registry `(("1.7.0_51" . ,(getenv "JAVA_HOME"))))
 
 ; Flymake for Java
 (require 'jde-eclipse-compiler-server)
