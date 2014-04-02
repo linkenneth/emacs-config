@@ -32,3 +32,6 @@
 ;; (setq jde-sourcepath (sourcepath-colon-path (getenv "PATH")))
 (setq jde-sourcepath nil)
 (setq jde-compiler '(("eclipse java compiler server" "/usr/share/java/ecj.jar")))
+
+; Use Java 1.7 compliance for ecj
+(setq jde-ecj-command-line-args '("-d" "none" "-1.7"))
