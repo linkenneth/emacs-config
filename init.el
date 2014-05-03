@@ -105,6 +105,9 @@
 ; nXhtml mode
 (load "nxhtml-config.el")
 
+; CSV mode
+(load "csv-config.el")
+
 ; Scala mode
 (load "scala-config.el")
 
