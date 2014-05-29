@@ -64,6 +64,12 @@
 
 (load "camel-score-config.el")
 
+;;;;;;;;;;;;;;;;;;;;;;;
+;; Tramp Mode Config ;;
+;;;;;;;;;;;;;;;;;;;;;;;
+
+(load "tramp-config.el")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Various major modes ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;
