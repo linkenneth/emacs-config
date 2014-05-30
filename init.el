@@ -118,7 +118,7 @@
 (load "scala-config.el")
 
 ; XHP mode
-(load "xhp-mode.el")
+(load "xhp-config.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Various OS-specific Configs ;;
