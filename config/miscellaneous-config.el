@@ -50,3 +50,6 @@
 ; Disable Aquamacs Autoface Mode if Aquamacs
 (if (fboundp 'aquamacs-autoface-mode)
     (aquamacs-autoface-mode 0))
+
+; Disable version control through emacs (DO IT THROUGH COMMAND LINE!)
+(setq vc-handled-backends ())

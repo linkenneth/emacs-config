@@ -120,6 +120,9 @@
 ; XHP mode
 (load "xhp-config.el")
 
+; Thrift mode
+(load "thrift-config.el")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Various OS-specific Configs ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
