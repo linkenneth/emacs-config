@@ -51,5 +51,5 @@
 (if (fboundp 'aquamacs-autoface-mode)
     (aquamacs-autoface-mode 0))
 
-; Disable version control through emacs (DO IT THROUGH COMMAND LINE!)
+; Disable version control through emacs (DO IT THROUGH COMMAND LINE!) (much much faster)
 (setq vc-handled-backends ())
