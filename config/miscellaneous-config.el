@@ -53,3 +53,6 @@
 
 ; Disable version control through emacs (DO IT THROUGH COMMAND LINE!) (much much faster)
 (setq vc-handled-backends ())
+
+; Indent spaces BY DEFAULT
+(setq indent-tabs-mode nil)
