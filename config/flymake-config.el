@@ -2,6 +2,7 @@
 ;; Flymake Config ;;
 ;;;;;;;;;;;;;;;;;;;;
 
+; On-the-fly syntax checking. Need to connect with external compilers
 (require 'flymake)
 
 ; Change color of fonts

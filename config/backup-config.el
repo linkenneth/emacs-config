@@ -7,4 +7,3 @@
       version-control t
       delete-old-versions t
       backup-by-copying t)
-

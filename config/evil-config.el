@@ -2,16 +2,17 @@
 ;; Evil Config ;;
 ;;;;;;;;;;;;;;;;;
 
+; Base vim emulation layer on Emacs
 (require 'evil)
 
-; Evil-surround
+; Evil-surround (vim controls for 's' commands)
 (require 'surround)
 (global-surround-mode 1)
 
-; Evil-numbers
+; Evil-numbers (increment / decrement numbers like in vim)
 (require 'evil-numbers)
 
-; Evil text object between
+; Evil text object between (vim controls for 'i', 'a' commands)
 (require 'evil-textobj-between)
 
 ; Evil hexl-mode patch
@@ -20,7 +21,7 @@
 ; End of line visual selection to not include EOL character
 (setq evil-want-visual-char-semi-exclusive t)
 
-; jk as ESC
+; 'jk' as ESC
 (evil-define-command cofi/maybe-exit ()
   :repeat change
   (interactive)

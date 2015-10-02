@@ -2,6 +2,7 @@
 ;; AutoComplete Mode Config ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(require 'auto-complete)
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories
 	     "~/.emacs.d/plugins/autocomplete/ac-dict")
@@ -12,8 +13,8 @@
   (add-to-list 'ac-sources 'ac-source-yasnippet))
 
 ; LaTeX mode
-(require 'ac-math)
 (defun ac-latex-mode-setup ()
+  (require 'ac-math)
   (setq ac-sources (append '(ac-source-math-latex
 			     ac-source-latex-commands) ac-sources)))
 (add-to-list 'ac-modes 'latex-mode)  ; make ac aware of latex-mode

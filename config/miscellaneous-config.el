@@ -12,7 +12,7 @@
 ; Set title to be name of document
 (setq frame-title-format '("Emacs @ " system-name ": %b %+%+ %f"))
 
-; Icomplete mode
+; Icomplete mode - autocompletion in the minibuffer
 (icomplete-mode t)
 
 ; Disable tool bars
@@ -44,16 +44,8 @@
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 (remove-hook 'kill-buffer-query-functions 'process-kill-buffer-query-function)
 
-; Sets default font on OS X
-(if (string-equal system-type "darwin")
-  (add-to-list 'default-frame-alist '(font . "Monaco")))
-
-; Disable Aquamacs Autoface Mode if Aquamacs
-(if (fboundp 'aquamacs-autoface-mode)
-    (aquamacs-autoface-mode 0))
-
 ; Disable version control through emacs (DO IT THROUGH COMMAND LINE!) (much much faster)
 (setq vc-handled-backends ())
 
 ; Indent spaces BY DEFAULT
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)

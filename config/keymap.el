@@ -3,44 +3,36 @@
 ;;;;;;;;;;;;
 
 ;;;;; EVIL ;;;;;
-; jk as ESC in Evil Insert Mode 
-(define-key evil-insert-state-map "j" #'cofi/maybe-exit)
-
-; scroll binding to SPC and DEL
-(define-key evil-normal-state-map (kbd "DEL") (lambda ()
-                     (interactive)
-		     (scroll-down)
-                     ))
-(define-key evil-normal-state-map " " (lambda ()
-                     (interactive)
-		     (scroll-up)
-                     ))
-(define-key evil-motion-state-map (kbd "DEL") (lambda ()
-                     (interactive)
-		     (scroll-down)
-                     ))
-(define-key evil-motion-state-map " " (lambda ()
-                     (interactive)
-		     (scroll-up)
-                     ))
-
 ; Function to undefine Evil commands
 (defun evil-undefine ()
  (interactive)
  (let (evil-mode-map-alist)
    (call-interactively (key-binding (this-command-keys)))))
 
+; 'jk' as ESC in Evil Insert Mode 
+(define-key evil-insert-state-map "j" #'cofi/maybe-exit)
+
+; scroll binding to SPC and DEL
+(define-key evil-normal-state-map (kbd "DEL")
+  (lambda () (interactive) (scroll-down)))
+(define-key evil-normal-state-map " "
+  (lambda () (interactive) (scroll-up)))
+(define-key evil-motion-state-map (kbd "DEL")
+  (lambda () (interactive) (scroll-down)))
+(define-key evil-motion-state-map " "
+  (lambda () (interactive) (scroll-up)))
+
 ; Evil numbers
 (define-key evil-normal-state-map (kbd "z u") 'evil-numbers/inc-at-pt)
 (define-key evil-normal-state-map (kbd "z d") 'evil-numbers/dec-at-pt)
 
 ; C-y for paste/yank like normal
-(define-key evil-insert-state-map "\C-y" 'evil-undefine)
-(define-key evil-motion-state-map "\C-y" 'evil-undefine)
+(define-key evil-insert-state-map (kbd "C-y") 'evil-undefine)
+(define-key evil-motion-state-map (kbd "C-y") 'evil-undefine)
 
 ; C-e for end of line like normal
-(define-key evil-insert-state-map "\C-e" 'evil-undefine)
-(define-key evil-motion-state-map "\C-e" 'evil-undefine)
+(define-key evil-insert-state-map (kbd "C-e") 'evil-undefine)
+(define-key evil-motion-state-map (kbd "C-e") 'evil-undefine)
 
 ;;;;; FLYMAKE ;;;;;
 (defun flymake-goto-prev-error-and-display ()
@@ -69,5 +61,6 @@
 (global-set-key (kbd "C-c C-:") 'colonize-word-at-point)
 
 ;;;;; FINDING STUFF ;;;;;
-(global-set-key (kbd "C-x M-f") 'ffap)
+; available with 'gf' in evil-mode
+;; (global-set-key (kbd "C-x M-f") 'ffap)
 (global-set-key (kbd "<f8>") 'rgrep)
