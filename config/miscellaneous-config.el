@@ -44,8 +44,9 @@
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 (remove-hook 'kill-buffer-query-functions 'process-kill-buffer-query-function)
 
-; Sets default font to "Ubuntu Mono" at size 12
-(add-to-list 'default-frame-alist '(font . "Monaco"))
+; Sets default font on OS X
+(if (string-equal system-type "darwin")
+  (add-to-list 'default-frame-alist '(font . "Monaco")))
 
 ; Disable Aquamacs Autoface Mode if Aquamacs
 (if (fboundp 'aquamacs-autoface-mode)
