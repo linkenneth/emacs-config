@@ -2,7 +2,7 @@
 ;; JavaScript Config ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-hook 'js-mode-hook (lambda ()
-			  (setq indent-tabs-mode nil)
-			  (setq js-indent-level 2)
-			  ))
+(defun js-mode-setup ()
+  (setq js-indent-level 2))
+
+(add-hook 'js-mode-hook 'js-mode-setup)

@@ -2,6 +2,7 @@
 ;; Elisp Integration ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
 
+; allows interactive evaluation of elisp expressions; see keymap.el
 (defun eval-and-replace-sexp-at-point ()
   (interactive)
   (let ((sexp (sexp-at-point)))

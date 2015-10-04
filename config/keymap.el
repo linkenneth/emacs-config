@@ -35,14 +35,6 @@
 (define-key evil-motion-state-map (kbd "C-e") 'evil-undefine)
 
 ;;;;; FLYMAKE ;;;;;
-(defun flymake-goto-prev-error-and-display ()
-  (interactive)
-  (flymake-goto-prev-error)
-  (credmp/flymake-display-err-minibuf))
-(defun flymake-goto-next-error-and-display ()
-  (interactive)
-  (flymake-goto-next-error)
-  (credmp/flymake-display-err-minibuf))
 (global-set-key (kbd "<f9>") 'flymake-goto-prev-error-and-display)
 (global-set-key (kbd "<f10>") 'flymake-goto-next-error-and-display)
 
@@ -53,8 +45,10 @@
 (defun ruby-keys-setup ()
   (define-key ruby-mode-map "\C-c\C-c" 'ruby-send-definition-and-go)
   (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent))
+
 (add-hook 'ruby-mode-hook 'ruby-keys-setup)
 
+;;;;; CamelCase / under_score shortcuts ;;;;;
 (global-set-key (kbd "C-c C--") 'dasherize-word-at-point)
 (global-set-key (kbd "C-c C-_") 'underscore-word-at-point)
 (global-set-key (kbd "C-c C-;") 'camelcase-word-at-point)

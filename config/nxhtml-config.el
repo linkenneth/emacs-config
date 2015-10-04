@@ -2,6 +2,7 @@
 ;; nXhtml ;;
 ;;;;;;;;;;;;
 
+;; TODO fix this and make this fast when I start using it
 (load "~/.emacs.d/plugins/nxhtml/autostart.el")
 
 ;; Mumamo is making newer emacs freak out - remove obsolete variable warning
@@ -15,6 +16,8 @@
     '(add-to-list 'byte-compile-not-obsolete-vars
                   'font-lock-beginning-of-syntax-function)))
 
+;; Fix for nXhtml mode freakout, but also a general change to make
+;; sure linum-mode is on.
 (add-hook 'after-change-major-mode-hook 'linum-on)
 
 ;; Normal nxhtml-mode bugged out so use this instead

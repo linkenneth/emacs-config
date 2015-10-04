@@ -76,7 +76,6 @@
 
 ;; Markup modes
 (load "tex-config.el")
-(load "org-config.el")
 (load "text-mode-config.el")
 (load "jade-stylus-config.el")
 (load "haml-config.el")
@@ -117,17 +116,14 @@
 ; Scala mode
 (load "scala-config.el")
 
-; XHP mode
-(load "xhp-config.el")
-
-; Thrift mode
-(load "thrift-config.el")
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Various OS-specific Configs ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(load "mac-config.el")
+; OS X
+(if (string-equal system-type "darwin")
+    (progn
+      (load "osx-config.el")))
 
 ;;;;;;;;;;;;;
 ;; Keymaps ;;

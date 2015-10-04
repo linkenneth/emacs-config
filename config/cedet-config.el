@@ -2,6 +2,8 @@
 ;; CEDET Config ;;
 ;;;;;;;;;;;;;;;;;;
 
+; Collection of Emacs Development Environment Tools
+; -- no one particular use, largely a dependency for many of plugins
 (load-file "~/.emacs.d/plugins/cedet/common/cedet.el")
 
 ;; ; EDE mode
@@ -12,4 +14,3 @@
 
 ;; ; Get rid of annoying headline bar
 ;; (global-semantic-stickyfunc-mode 0)
-

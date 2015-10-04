@@ -21,7 +21,7 @@
 ; End of line visual selection to not include EOL character
 (setq evil-want-visual-char-semi-exclusive t)
 
-; 'jk' as ESC
+; 'jk' as ESC; see keymap.el
 (evil-define-command cofi/maybe-exit ()
   :repeat change
   (interactive)
