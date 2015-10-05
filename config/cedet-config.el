@@ -4,7 +4,7 @@
 
 ; Collection of Emacs Development Environment Tools
 ; -- no one particular use, largely a dependency for many of plugins
-(load-file "~/.emacs.d/plugins/cedet/common/cedet.el")
+(require 'cedet)
 
 ;; ; EDE mode
 ;; (global-ede-mode t)
