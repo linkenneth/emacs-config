@@ -2,6 +2,11 @@
 ;; Set load paths and environment variables ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; ;; Benchmark startup time! Comment while not testing.
+;; (add-to-list 'load-path "~/.emacs.d/plugins/benchmark-init")
+;; (require 'benchmark-init-loaddefs)
+;; (benchmark-init/activate)
+
 (add-to-list 'load-path "~/.emacs.d/config")
 (load "load-path-config.el")
 
