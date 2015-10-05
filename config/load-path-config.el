@@ -16,13 +16,13 @@
 ;; AutoComplete Path ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path "~/.emacs.d/plugins/autocomplete/")
+(add-to-list 'load-path "~/.emacs.d/plugins/autocomplete")
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Color Theme Path ;;
 ;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path "~/.emacs.d/plugins/color-theme/")
+(add-to-list 'load-path "~/.emacs.d/plugins/color-theme")
 
 ;;;;;;;;;;;;;;;;;;;;
 ;; YaSnippet Path ;;
