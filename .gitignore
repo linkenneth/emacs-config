@@ -1,7 +1,7 @@
 auto-save-list/
 server/
-*/#*#
-*/*~
+#*#
+*~
 ac-comphist.dat
 tramp
 plugins/nxhtml/etc/schema/xhtml-loader.rnc
