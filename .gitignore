@@ -8,3 +8,4 @@ plugins/nxhtml/etc/schema/xhtml-loader.rnc
 *.elc
 elpa/
 ido.last
+config/google-config.el

@@ -45,11 +45,11 @@
 
 (load "completions-config.el")
 
-;;;;;;;;;;;;;;;;;;
-;; Flymake Mode ;;
-;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+;; Flycheck Mode ;;
+;;;;;;;;;;;;;;;;;;;
 
-(load "flymake-config.el")
+(load "flycheck-config.el")
 
 ;;;;;;;;;;;
 ;; CEDET ;;
@@ -127,8 +127,12 @@
 
 ; OS X
 (if (string-equal system-type "darwin")
-    (progn
-      (load "osx-config.el")))
+    (load "osx-config.el"))
+
+; Google Corp
+(require 's)
+(if (s-suffix? "corp.google.com" system-name)
+    (load "google-config.el"))
 
 ;;;;;;;;;;;;;
 ;; Keymaps ;;

@@ -60,6 +60,6 @@
 (global-set-key (kbd "C-c C-:") 'colonize-word-at-point)
 
 ;;;;; FINDING STUFF ;;;;;
-; available with 'gf' in evil-mode
-;; (global-set-key (kbd "C-x M-f") 'ffap)
-(global-set-key (kbd "<f8>") 'rgrep)
+(if (s-suffix? system-name "corp.google.com")
+    (global-set-key (kbd "<f8>") 'csearch)
+    (global-set-key (kbd "<f8>") 'rgrep))
