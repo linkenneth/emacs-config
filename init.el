@@ -40,10 +40,10 @@
 (load "yasnippet-config.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Setting up AutoComplete Mode ;;
+;; Setting up Company-YCMD Mode ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(load "ac-config.el")
+(load "completions-config.el")
 
 ;;;;;;;;;;;;;;;;;;
 ;; Flymake Mode ;;

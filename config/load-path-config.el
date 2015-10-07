@@ -4,6 +4,12 @@
 
 (add-to-list 'load-path "~/.emacs.d/plugins")
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; General Libraries Path ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path "~/.emacs.d/plugins/lib")
+
 ;;;;;;;;;;;;;;;;
 ;; Evil Paths ;;
 ;;;;;;;;;;;;;;;;
@@ -13,10 +19,11 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/evil/evil-numbers")
 
 ;;;;;;;;;;;;;;;;;;;;;;;
-;; AutoComplete Path ;;
+;; Company-YCMD Path ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path "~/.emacs.d/plugins/autocomplete")
+(add-to-list 'load-path "~/.emacs.d/plugins/company")
+(add-to-list 'load-path "~/.emacs.d/plugins/ycmd")
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Color Theme Path ;;
