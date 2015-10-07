@@ -48,11 +48,8 @@
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 
 ;;;;; RUBY MODE ;;;;;
-(defun ruby-keys-setup ()
-  (define-key ruby-mode-map "\C-c\C-c" 'ruby-send-definition-and-go)
-  (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent))
-
-(add-hook 'ruby-mode-hook 'ruby-keys-setup)
+(define-key ruby-mode-map "\C-c\C-c" 'ruby-send-definition-and-go)
+(define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
 
 ;;;;; CamelCase / under_score shortcuts ;;;;;
 (global-set-key (kbd "C-c C--") 'dasherize-word-at-point)
