@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;
 
 ;;;;; EVIL ;;;;;
-; Function to undefine Evil commands
+;; Function to undefine Evil commands
 (defun evil-undefine ()
  (interactive)
  (let (evil-mode-map-alist)
@@ -43,6 +43,8 @@
 
 ;;;;; COMPANY-YCMD MODE ;;;;;
 (define-key company-mode-map (kbd "TAB") 'company-indent-or-complete-common)
+(define-key company-active-map (kbd "C-n") 'company-select-next)
+(define-key company-active-map (kbd "C-p") 'company-select-previous)
 
 ;;;;; RUBY MODE ;;;;;
 (defun ruby-keys-setup ()
