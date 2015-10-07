@@ -35,8 +35,8 @@
 (define-key evil-motion-state-map (kbd "C-e") 'evil-undefine)
 
 ;;;;; FLYMAKE ;;;;;
-(global-set-key (kbd "<f9>") 'flymake-goto-prev-error-and-display)
-(global-set-key (kbd "<f10>") 'flymake-goto-next-error-and-display)
+;; (global-set-key (kbd "<f9>") 'flymake-goto-prev-error-and-display)
+;; (global-set-key (kbd "<f10>") 'flymake-goto-next-error-and-display)
 
 ;;;;; ELISP INTEGRATION ;;;;;
 (global-set-key (kbd "<f12>") 'eval-and-replace-sexp-at-point)
