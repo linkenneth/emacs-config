@@ -9,3 +9,14 @@
 
 ;; TODO figure out if this has problems
 (setq package-user-dir "~/.emacs.d/elpa")
+
+;; Wrote this myself!
+(defun flycheck-toggle-error-list-or-mode-off ()
+  (interactive)
+  (cond
+   ((not flycheck-mode) (flycheck-mode 1))
+   ((and flycheck-mode (get-buffer-window "*Flycheck errors*"))
+    (progn
+      (delete-windows-on "*Flycheck errors*")
+      (flycheck-mode 0)))
+   ((flycheck-list-errors))))

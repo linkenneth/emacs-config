@@ -37,7 +37,7 @@
 ;;;;; FLYCHECK ;;;;;
 (global-set-key (kbd "<f9>") 'flycheck-previous-error)
 (global-set-key (kbd "<f10>") 'flycheck-next-error)
-(global-set-key (kbd "<f11>") 'flycheck-list-errors)
+(global-set-key (kbd "<f11>") 'flycheck-toggle-error-list-or-mode-off)
 
 ;;;;; ELISP INTEGRATION ;;;;;
 (global-set-key (kbd "<f12>") 'eval-and-replace-sexp-at-point)
