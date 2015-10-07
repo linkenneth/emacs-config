@@ -34,9 +34,10 @@
 (define-key evil-insert-state-map (kbd "C-e") 'evil-undefine)
 (define-key evil-motion-state-map (kbd "C-e") 'evil-undefine)
 
-;;;;; FLYMAKE ;;;;;
-;; (global-set-key (kbd "<f9>") 'flymake-goto-prev-error-and-display)
-;; (global-set-key (kbd "<f10>") 'flymake-goto-next-error-and-display)
+;;;;; FLYCHECK ;;;;;
+(global-set-key (kbd "<f9>") 'flycheck-previous-error)
+(global-set-key (kbd "<f10>") 'flycheck-next-error)
+(global-set-key (kbd "<f11>") 'flycheck-list-errors)
 
 ;;;;; ELISP INTEGRATION ;;;;;
 (global-set-key (kbd "<f12>") 'eval-and-replace-sexp-at-point)
@@ -60,6 +61,6 @@
 (global-set-key (kbd "C-c C-:") 'colonize-word-at-point)
 
 ;;;;; FINDING STUFF ;;;;;
-(if (s-suffix? system-name "corp.google.com")
+(if (s-suffix? "corp.google.com" system-name)
     (global-set-key (kbd "<f8>") 'csearch)
     (global-set-key (kbd "<f8>") 'rgrep))

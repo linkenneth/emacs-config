@@ -25,6 +25,13 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/company")
 (add-to-list 'load-path "~/.emacs.d/plugins/ycmd")
 
+;;;;;;;;;;;;;;;;;;;
+;; Flycheck Path ;;
+;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path "~/.emacs.d/plugins/flycheck")
+(add-to-list 'load-path "~/.emacs.d/plugins/flycheck/extensions")
+
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Color Theme Path ;;
 ;;;;;;;;;;;;;;;;;;;;;;
