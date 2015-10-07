@@ -5,8 +5,8 @@
 (require 'company-ycmd)
 (set-variable 'ycmd-server-command '("python" "/usr/lib/ycmd/ycmd/__main__.py"))
 
-;; Only need one character and 0.3 seconds to begin completion
-(setq company-idle-delay 0.3)
+;; Only need one character and 0 seconds (instant) to begin completion
+(setq company-idle-delay 0)
 (setq company-minimum-prefix-length 1)
 
 (company-ycmd-setup)
