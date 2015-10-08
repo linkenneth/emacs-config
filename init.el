@@ -15,7 +15,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (load "miscellaneous-config.el")
-(setq custom-file "custom-config.el")
+(setq custom-file "~/.emacs.d/config/custom-config.el")
 (load custom-file)
 (load "marks-and-region-config.el")
 (load "color-theme-config.el")
@@ -87,6 +87,9 @@
 (load "yaml-config.el")
 (load "sass-config.el")
 (load "scss-config.el")
+
+; Emacs Lisp mode
+(load "elisp-mode-config.el")
 
 ; C-family modes
 (load "c-family-config.el")

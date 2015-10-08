@@ -9,11 +9,6 @@
       (flycheck-ycmd-setup)
       (add-hook 'prog-mode-hook 'flycheck-mode)))
 
-;; TODO has problems with flycheck's elisp checker. Also, consider
-;; using package manager sometime in the future?
-(setq flycheck-emacs-lisp-initialize-packages nil)
-(setq flycheck-emacs-lisp-package-user-dir nil)
-
 ;; TODO figure out if this has problems
 (setq package-user-dir "~/.emacs.d/elpa")
 
@@ -26,12 +21,17 @@
 (defun flycheck-toggle-error-list-or-mode-off ()
   (interactive)
   (cond
-   ((not flycheck-mode) (flycheck-mode 1))
+   ((not flycheck-mode)
+    (progn
+      (flycheck-mode 1)
+      (message "flycheck-mode on")))
    ((and flycheck-mode (get-buffer-window "*Flycheck errors*"))
     (progn
       (delete-windows-on "*Flycheck errors*")
-      (flycheck-mode 0)))
-   ((flycheck-list-errors))))
+      (flycheck-mode 0)
+      (message "flycheck-mode off")))
+   ((progn
+      (flycheck-list-errors)))))
 
 (eval-after-load 'flycheck
   (progn

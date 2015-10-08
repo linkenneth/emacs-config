@@ -34,6 +34,10 @@
 (define-key evil-insert-state-map (kbd "C-e") 'evil-undefine)
 (define-key evil-motion-state-map (kbd "C-e") 'evil-undefine)
 
+;; M-n and M-p act like C-n and C-p in command mode
+(define-key evil-ex-completion-map (kbd "M-n") #'next-complete-history-element)
+(define-key evil-ex-completion-map (kbd "M-p") #'previous-complete-history-element)
+
 ;;;;; FLYCHECK ;;;;;
 (global-set-key (kbd "<f9>") 'flycheck-previous-error)
 (global-set-key (kbd "<f10>") 'flycheck-next-error)
@@ -60,6 +64,6 @@
 (global-set-key (kbd "C-c C-:") 'colonize-word-at-point)
 
 ;;;;; FINDING STUFF ;;;;;
-(if (s-suffix? "corp.google.com" system-name)
+(if (s-suffix? "mtv.corp.google.com" system-name)
     (global-set-key (kbd "<f8>") 'csearch)
     (global-set-key (kbd "<f8>") 'rgrep))
