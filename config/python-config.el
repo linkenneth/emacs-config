@@ -4,7 +4,8 @@
 
 (defun python-mode-setup ()
   ; Reinstate current directory
-  (setq python-remove-cwd-from-path nil))
+  (setq python-remove-cwd-from-path nil)
+  (setq py-indent-offset 4))
 
 (add-hook 'python-mode-hook 'python-mode-setup)
 
