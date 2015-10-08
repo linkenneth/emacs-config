@@ -14,15 +14,17 @@
 
 ;; If on OS X (corp or personal laptop). This setup requires a
 ;; specific installation of ycmd in a location I had determined.
-(if (string-equal system-type "darwin")
+(if (not (s-suffix? "mtv.corp.google.com" system-name))
     (progn
       (require 'company-ycmd)
       (set-variable 'ycmd-server-command '("python" "/usr/lib/ycmd/ycmd/__main__.py"))
 
       (company-ycmd-setup)
-      (add-hook 'after-init-hook 'global-company-mode)))
-      (add-hook 'prog-mode-hook 'ycmd-mode)
+      (add-hook 'after-init-hook 'global-company-mode)
+      (add-hook 'prog-mode-hook 'ycmd-mode)))
 
 ;; Only need one character and 0 seconds (instant) to begin completion
-(setq company-idle-delay 0)
-(setq company-minimum-prefix-length 1)
+(eval-after-load 'company-ycmd
+  (progn
+    (setq company-idle-delay 0)
+    (setq company-minimum-prefix-length 1)))

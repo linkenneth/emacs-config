@@ -80,4 +80,5 @@
 ;; Multiple Cursors Path ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path "~/.emacs.d/plugins/multiple-cursors")
+;; TODO add back
+;; (add-to-list 'load-path "~/.emacs.d/plugins/multiple-cursors")

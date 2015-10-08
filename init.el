@@ -129,9 +129,8 @@
 (if (string-equal system-type "darwin")
     (load "osx-config.el"))
 
-; Google Corp
-(require 's)
-(if (s-suffix? "corp.google.com" system-name)
+; Corp desktop
+(if (s-suffix? "mtv.corp.google.com" system-name)
     (load "google-config.el"))
 
 ;;;;;;;;;;;;;

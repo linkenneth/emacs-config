@@ -2,6 +2,13 @@
 ;; Flycheck Config ;;
 ;;;;;;;;;;;;;;;;;;;;;
 
+;; All except corp desktop
+(if (not (s-suffix? "mtv.corp.google.com" system-name))
+    (progn
+      (require 'flycheck-ycmd)
+      (flycheck-ycmd-setup)
+      (add-hook 'prog-mode-hook 'flycheck-mode)))
+
 ;; TODO has problems with flycheck's elisp checker. Also, consider
 ;; using package manager sometime in the future?
 (setq flycheck-emacs-lisp-initialize-packages nil)
@@ -10,7 +17,9 @@
 ;; TODO figure out if this has problems
 (setq package-user-dir "~/.emacs.d/elpa")
 
-;; Wrote this myself!
+;; Toggles the Flycheck error list as well as flycheck-mode itself on
+;; and off; see keymap.el
+;; P.S. wrote this entirely myself!
 (defun flycheck-toggle-error-list-or-mode-off ()
   (interactive)
   (cond
@@ -20,3 +29,14 @@
       (delete-windows-on "*Flycheck errors*")
       (flycheck-mode 0)))
    ((flycheck-list-errors))))
+
+(eval-after-load 'flycheck
+  (progn
+    ;; Make Flycheck show error in tooltip as opposed to bottom bar
+    (require 'flycheck-pos-tip)
+    (setq flycheck-display-errors-function 'flycheck-pos-tip-error-messages)
+
+    ;; Fix bug with company-mode and flycheck-mode together (this will
+    ;; be fixed in 24.5+)
+    (when (not (display-graphic-p))
+      (setq flycheck-indication-mode nil))))

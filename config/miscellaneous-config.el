@@ -5,6 +5,9 @@
 ; Make emacs work with emacsclient and server files
 (server-start)
 
+; Some basic string manipulation, for rest of the ocnfig
+(require 's)
+
 ; My name and email
 (setq user-full-name "Kenneth Lin"
       user-mail-address "linkenneth@live.com")
