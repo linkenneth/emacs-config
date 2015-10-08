@@ -17,6 +17,9 @@
 ;; TODO figure out if this has problems
 (setq package-user-dir "~/.emacs.d/elpa")
 
+;; Use the current load path to find symbols in elisp-mode
+(setq flycheck-emacs-lisp-load-path 'inherit)
+
 ;; Toggles the Flycheck error list as well as flycheck-mode itself on
 ;; and off; see keymap.el
 ;; P.S. wrote this entirely myself!
