@@ -23,8 +23,14 @@
       (add-hook 'after-init-hook 'global-company-mode)
       (add-hook 'prog-mode-hook 'ycmd-mode)))
 
-;; Only need one character and 0 seconds (instant) to begin completion
 (eval-after-load 'company-ycmd
   (progn
+    ;; Only need one character and 0 seconds (instant) to begin completion
     (setq company-idle-delay 0)
-    (setq company-minimum-prefix-length 1)))
+    (setq company-minimum-prefix-length 1)
+
+    ;; Allow other user input that aren't completion candidates. The
+    ;; default is, if you do any completion action (ie. hit TAB o
+    ;; RET), matching is required. This disables it and makes
+    ;; auto-completion completely non-intrusive.
+    (setq company-require-match nil)))

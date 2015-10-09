@@ -10,7 +10,8 @@
    (call-interactively (key-binding (this-command-keys)))))
 
 ;; 'jk' as ESC in Evil Insert Mode 
-(define-key evil-insert-state-map "j" #'cofi/maybe-exit)
+(define-key evil-insert-state-map "j" #'cofi/maybe-exit-jk)
+(define-key evil-insert-state-map "k" #'cofi/maybe-exit-kj)
 
 ;; scroll binding to SPC and DEL
 (define-key evil-normal-state-map (kbd "DEL")
