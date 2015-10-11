@@ -39,6 +39,9 @@
 (define-key evil-ex-completion-map (kbd "M-n") #'next-complete-history-element)
 (define-key evil-ex-completion-map (kbd "M-p") #'previous-complete-history-element)
 
+;;;;; SPEEDBAR ;;;;;
+(global-set-key (kbd "<f2>") 'sr-speedbar-toggle)
+
 ;;;;; FLYCHECK ;;;;;
 (global-set-key (kbd "<f9>") 'flycheck-previous-error)
 (global-set-key (kbd "<f10>") 'flycheck-next-error)

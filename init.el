@@ -20,6 +20,7 @@
 (load "marks-and-region-config.el")
 (load "color-theme-config.el")
 (load "backup-config.el")
+(load "speedbar-config.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting up Evil Mode ;;
