@@ -11,4 +11,4 @@
 (setq speedbar-use-images nil)
 
 ;; Skip the speedbar window when using C-x C-o (other-window)
-(setq sr-speedar-skip-other-window-p t)
+(setq sr-speedbar-skip-other-window-p t)
