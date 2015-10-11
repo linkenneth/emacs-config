@@ -52,3 +52,9 @@
 
 ; Indent spaces BY DEFAULT
 (setq-default indent-tabs-mode nil)
+
+; Automatically insert ')' when '(' is inserted
+(electric-pair-mode)
+
+; Automatically indents current line and previous line when RET is hit
+(electric-indent-mode)
