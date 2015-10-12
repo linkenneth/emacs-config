@@ -55,6 +55,9 @@
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 
+;; switch between available backends
+(global-set-key (kbd "C-;") 'company-other-backend)
+
 ;;;;; RUBY MODE ;;;;;
 (defun ruby-keys-setup ()
   (define-key 'ruby-mode-map "\C-c\C-c" 'ruby-send-definition-and-go)
