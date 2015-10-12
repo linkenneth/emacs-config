@@ -37,8 +37,10 @@
 
 ;;;;; SPEEDBAR ;;;;;
 (global-set-key (kbd "<f2>") 'sr-speedbar-open-and-select-window)
-(define-key speedbar-mode-map " " 'scroll-up)
-(define-key speedbar-mode-map (kbd "DEL") 'scroll-down)
+(define-key speedbar-buffers-key-map " " 'scroll-up)
+(define-key speedbar-file-key-map " " 'scroll-up)
+(define-key speedbar-buffers-key-map (kbd "DEL") 'scroll-down)
+(define-key speedbar-file-key-map (kbd "DEL") 'scroll-down)
 
 ;;;;; FLYCHECK ;;;;;
 (global-set-key (kbd "<f9>") 'flycheck-previous-error)
