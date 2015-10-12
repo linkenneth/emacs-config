@@ -12,3 +12,11 @@
 
 ;; Skip the speedbar window when using C-x C-o (other-window)
 (setq sr-speedbar-skip-other-window-p t)
+
+;; Opens speedbar if not open and selects the speedbar window; see
+;; keymap.el
+(defun sr-speedbar-open-and-select-window ()
+  (interactive)
+  (if (not (sr-speedbar-exist-p))
+      (sr-speedbar-toggle))
+  (sr-speedbar-select-window))

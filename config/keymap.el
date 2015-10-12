@@ -14,14 +14,10 @@
 (define-key evil-insert-state-map "k" #'cofi/maybe-exit-kj)
 
 ;; scroll binding to SPC and DEL
-(define-key evil-normal-state-map (kbd "DEL")
-  (lambda () (interactive) (scroll-down)))
-(define-key evil-normal-state-map " "
-  (lambda () (interactive) (scroll-up)))
-(define-key evil-motion-state-map (kbd "DEL")
-  (lambda () (interactive) (scroll-down)))
-(define-key evil-motion-state-map " "
-  (lambda () (interactive) (scroll-up)))
+(define-key evil-normal-state-map (kbd "DEL") 'scroll-down)
+(define-key evil-normal-state-map " " 'scroll-up)
+(define-key evil-motion-state-map (kbd "DEL") 'scroll-down)
+(define-key evil-motion-state-map " " 'scroll-up)
 
 ;; Evil numbers
 (define-key evil-normal-state-map (kbd "z u") 'evil-numbers/inc-at-pt)
@@ -40,7 +36,9 @@
 (define-key evil-ex-completion-map (kbd "M-p") #'previous-complete-history-element)
 
 ;;;;; SPEEDBAR ;;;;;
-(global-set-key (kbd "<f2>") 'sr-speedbar-toggle)
+(global-set-key (kbd "<f2>") 'sr-speedbar-open-and-select-window)
+(define-key speedbar-mode-map " " (lambda () (interactive) (scroll-up)))
+(define-key speedbar-mode-map (kbd "DEL") (lambda () (interactive) (scroll-down)))
 
 ;;;;; FLYCHECK ;;;;;
 (global-set-key (kbd "<f9>") 'flycheck-previous-error)
