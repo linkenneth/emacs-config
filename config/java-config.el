@@ -17,8 +17,8 @@
 ;; (setq jde-jdk-registry `(("1.6.0_65" . ,(getenv "JAVA_HOME"))))
 ;; (setq jde-jdk-registry `(("1.7.0_51" . ,(getenv "JAVA_HOME"))))
 
-(autoload 'jde-mode "jde" "JDE mode." t)
-(setq auto-mode-alist (append '(("\\.java\\'" . jde-mode)) auto-mode-alist))
+;; (autoload 'jde-mode "jde" "JDE mode." t)
+;; (setq auto-mode-alist (append '(("\\.java\\'" . jde-mode)) auto-mode-alist))
 
 (defun jde-mode-setup ()
   ;; Flymake for Java

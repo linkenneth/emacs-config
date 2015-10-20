@@ -35,6 +35,9 @@
 (define-key evil-ex-completion-map (kbd "M-n") #'next-complete-history-element)
 (define-key evil-ex-completion-map (kbd "M-p") #'previous-complete-history-element)
 
+;; C-a in evil-ex mode to act normally (ie. go to beginning of line)
+(define-key evil-ex-completion-map (kbd "C-a") #'move-beginning-of-line)
+
 ;;;;; SPEEDBAR ;;;;;
 (global-set-key (kbd "<f2>") 'sr-speedbar-open-and-select-window)
 (define-key speedbar-buffers-key-map " " 'scroll-up)
