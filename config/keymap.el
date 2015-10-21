@@ -38,6 +38,9 @@
 ;; C-a in evil-ex mode to act normally (ie. go to beginning of line)
 (define-key evil-ex-completion-map (kbd "C-a") #'move-beginning-of-line)
 
+;; \\ is same as C-6 (switch to last used buffer)
+(define-key evil-motion-state-map (kbd "\\") 'evil-switch-to-windows-last-buffer)
+
 ;;;;; SPEEDBAR ;;;;;
 (global-set-key (kbd "<f2>") 'sr-speedbar-open-and-select-window)
 (define-key speedbar-buffers-key-map " " 'scroll-up)
