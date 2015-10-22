@@ -58,3 +58,10 @@
 
 ; Automatically indents current line and previous line when RET is hit
 (electric-indent-mode)
+
+; Uniquify same-name files
+(toggle-uniquify-buffer-names)
+
+; If two files d/a1/b/c and d/a2/b/c, give filenames c|a1\b and c|a2\b
+(setq uniquify-buffer-name-style 'post-forward)
+(setq uniquify-strip-common-suffix t)
