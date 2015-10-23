@@ -2,26 +2,26 @@
 ;; Evil Config ;;
 ;;;;;;;;;;;;;;;;;
 
-; Base vim emulation layer on Emacs
+;; Base vim emulation layer on Emacs
 (require 'evil)
 
-; Evil-surround (vim controls for 's' commands)
+;; Evil-surround (vim controls for 's' commands)
 (require 'surround)
 (global-surround-mode 1)
 
-; Evil-numbers (increment / decrement numbers like in vim)
+;; Evil-numbers (increment / decrement numbers like in vim)
 (require 'evil-numbers)
 
-; Evil text object between (vim controls for 'i', 'a' commands)
+;; Evil text object between (vim controls for 'i', 'a' commands)
 (require 'evil-textobj-between)
 
-; Evil hexl-mode patch
+;; Evil hexl-mode patch
 (require 'hexl-evil-patch)
 
-; End of line visual selection to not include EOL character
+;; End of line visual selection to not include EOL character
 (setq evil-want-visual-char-semi-exclusive t)
 
-; 'jk' as ESC; see keymap.el
+;; 'jk' as ESC;; see keymap.el
 (evil-define-command cofi/maybe-exit-jk ()
   :repeat change
   (interactive)
@@ -38,7 +38,7 @@
        (t (setq unread-command-events (append unread-command-events
 					      (list evt))))))))
 
-; 'kj' as ESC; see keymap.el
+;; 'kj' as ESC;; see keymap.el
 (evil-define-command cofi/maybe-exit-kj ()
   :repeat change
   (interactive)
@@ -55,13 +55,14 @@
        (t (setq unread-command-events (append unread-command-events
 					      (list evt))))))))
 
-; C-w in insert mode as window map
+;; C-w in insert mode as window map
 (setq evil-want-C-w-delete nil)
 
-; Cursor coloring
+;; Cursor coloring
 (setq evil-default-cursor '("green" t))
+(setq evil-normal-state-cursor '("green" t))
 (setq evil-visual-state-cursor '("royalblue" t))
 (setq evil-replace-state-cursor '("red" t))
 
-; Initialize Evil
+;; Initialize Evil
 (evil-mode 1)

@@ -2,7 +2,7 @@
 ;; Backup Config ;;
 ;;;;;;;;;;;;;;;;;;;
 
-; Backups
+;; Backups
 (setq backup-directory-alist `(("" . "~/.saves/"))
       version-control t
       delete-old-versions t
