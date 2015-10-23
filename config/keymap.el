@@ -31,12 +31,20 @@
 (define-key evil-insert-state-map (kbd "C-e") 'evil-undefine)
 (define-key evil-motion-state-map (kbd "C-e") 'evil-undefine)
 
+;; C-a for beginning of line like normal
+(define-key evil-insert-state-map (kbd "C-a") 'evil-undefine)
+(define-key evil-motion-state-map (kbd "C-a") 'evil-undefine)
+
+;; C-k for kill-line like normal
+(define-key evil-insert-state-map (kbd "C-k") 'evil-undefine)
+(define-key evil-motion-state-map (kbd "C-k") 'evil-undefine)
+
 ;; M-n and M-p act like C-n and C-p in command mode
 (define-key evil-ex-completion-map (kbd "M-n") #'next-complete-history-element)
 (define-key evil-ex-completion-map (kbd "M-p") #'previous-complete-history-element)
 
-;; C-a in evil-ex mode to act normally (ie. go to beginning of line)
-(define-key evil-ex-completion-map (kbd "C-a") #'move-beginning-of-line)
+;; ;; C-a in evil-ex mode to act normally (ie. go to beginning of line)
+;; (define-key evil-ex-completion-map (kbd "C-a") #'move-beginning-of-line)
 
 ;; \\ is same as C-6 (switch to last used buffer)
 (define-key evil-motion-state-map (kbd "\\") 'evil-switch-to-windows-last-buffer)
