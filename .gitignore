@@ -9,3 +9,4 @@ plugins/nxhtml/etc/schema/xhtml-loader.rnc
 elpa/
 ido.last
 config/google-config.el
+session.*

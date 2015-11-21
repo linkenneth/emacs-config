@@ -88,3 +88,5 @@
 (if (s-suffix? "mtv.corp.google.com" system-name)
     (global-set-key (kbd "<f8>") 'csearch)
     (global-set-key (kbd "<f8>") 'rgrep))
+
+(global-set-key (kbd "<f7>") 'occur)
