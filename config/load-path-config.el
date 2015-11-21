@@ -82,3 +82,10 @@
 
 ;; TODO add back
 ;; (add-to-list 'load-path "~/.emacs.d/plugins/multiple-cursors")
+
+;;;;;;;;;;;;;;;;;;;;
+;; Helm-Mode Path ;;
+;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path "~/.emacs.d/plugins/emacs-async")
+(add-to-list 'load-path "~/.emacs.d/plugins/emacs-helm")

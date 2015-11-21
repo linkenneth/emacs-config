@@ -49,6 +49,16 @@
 ;; \\ is same as C-6 (switch to last used buffer)
 (define-key evil-motion-state-map (kbd "\\") 'evil-switch-to-windows-last-buffer)
 
+;;;;; HELM MODE ;;;;;
+(global-set-key (kbd "<f7>") 'helm-occur)
+(global-set-key (kbd "<f8>") 'helm-find)
+(global-set-key (kbd "C-x c r") 'helm-resume)
+(global-set-key (kbd "<f1> a") 'helm-apropos)
+(global-set-key (kbd "C-h a") 'helm-apropos)
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to do persistent action
+(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
+(define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
+
 ;;;;; SPEEDBAR ;;;;;
 (global-set-key (kbd "<f2>") 'sr-speedbar-open-and-select-window)
 (define-key speedbar-buffers-key-map " " 'scroll-up)
@@ -88,5 +98,3 @@
 (if (s-suffix? "mtv.corp.google.com" system-name)
     (global-set-key (kbd "<f8>") 'csearch)
     (global-set-key (kbd "<f8>") 'rgrep))
-
-(global-set-key (kbd "<f7>") 'occur)

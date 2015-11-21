@@ -32,7 +32,14 @@
 ;; Setup IDO mode ;;
 ;;;;;;;;;;;;;;;;;;;;
 
-(load "ido-config.el")
+;; Temporarily turn off IDO mode to try out Helm mode
+;; (load "ido-config.el")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Setting up Helm Mode ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(load "helm-mode-config.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting up YaSnippet ;;
