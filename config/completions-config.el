@@ -17,7 +17,7 @@
 (if (not (s-suffix? "mtv.corp.google.com" system-name))
     (progn
       (require 'company-ycmd)
-      (set-variable 'ycmd-server-command '("python" "/usr/lib/ycmd/ycmd/__main__.py"))
+      (set-variable 'ycmd-server-command '("python" "/usr/local/lib/ycmd/ycmd/__main__.py"))
 
       (company-ycmd-setup)
       (add-hook 'after-init-hook 'global-company-mode)
