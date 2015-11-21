@@ -25,7 +25,7 @@
   (if (file-directory-p (helm-get-selection))
       (apply original-helm-execute-persistent-action args)
     (helm-maybe-exit-minibuffer)))
-(define-key helm-map (kbd "<return>") 'helm-execute-persistent-action)
+(define-key helm-map (kbd "RET") 'helm-execute-persistent-action)
 
 (setq original-helm-ff-delete-char-backward
       (symbol-function 'helm-ff-delete-char-backward))
