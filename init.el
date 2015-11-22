@@ -54,7 +54,10 @@
 ;; Setting up YaSnippet ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(load "yasnippet-config.el")
+;; TODO until I can figure out how to make Yasnippet work well with
+;; company, no more yasnippet (not that it's been useful).
+
+;; (load "yasnippet-config.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting up Company-YCMD Mode ;;

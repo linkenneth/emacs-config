@@ -24,5 +24,6 @@
   (setq TeX-debug-bad-boxes t)
   (setq TeX-debug-warnings t))
 
-(if (string-equal system-type "darwin")
-    (add-hook 'LaTeX-mode-hook 'osx-tex-mode-setup))
+(do-if-profile
+ :mac-osx
+ `(add-hook 'LaTeX-mode-hook 'osx-tex-mode-setup))

@@ -3,11 +3,12 @@
 ;;;;;;;;;;;;;;;;;;;;;
 
 ;; All except corp desktop
-(if (not (s-suffix? "mtv.corp.google.com" system-name))
-    (progn
-      (require 'flycheck-ycmd)
-      (flycheck-ycmd-setup)
-      (add-hook 'prog-mode-hook 'flycheck-mode)))
+(do-if-not-profile
+ '(:linux :corp :desktop)
+ `(progn
+    (require 'flycheck-ycmd)
+    (flycheck-ycmd-setup)
+    (add-hook 'prog-mode-hook 'flycheck-mode)))
 
 ;; TODO figure out if this has problems
 (setq package-user-dir "~/.emacs.d/elpa")

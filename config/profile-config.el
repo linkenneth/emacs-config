@@ -8,8 +8,9 @@
   "List of profiles that the current emacs setup is using.")
 
 (defun do-if-profile (has-profiles body)
-  "Executes BODY if all of the profiles in HAS-PROFILES is
-  currently being used."
+  "Executes BODY if all of the profiles in HAS-PROFILES are
+  currently being used. HAS-PROFILES can be a single symbol or a
+  list of symbols."
   (let ((in-profile t)
         (profiles (if (listp has-profiles) has-profiles (list has-profiles))))
     (dolist (profile profiles)
@@ -18,14 +19,15 @@
     (if in-profile (eval body))))
 
 (defun do-if-not-profile (has-profiles body)
-  "Executes BODY if none of the profiles in HAS-PROFILES is
-  currently being used."
+  "Executes BODY if not all of the profiles in HAS-PROFILES are
+  currently being used. HAS-PROFILES can be a single symbol or a
+  list of symbols."
   (let ((in-profile t)
         (profiles (if (listp has-profiles) has-profiles (list has-profiles))))
     (dolist (profile profiles)
-      (if (memq profile profile-config--profiles)
+      (if (not (memq profile profile-config--profiles))
           (setq in-profile nil)))
-    (if in-profile (eval body))))
+    (if (not in-profile) (eval body))))
 
 
 ;;;;;;;;;;;;;;;;;;;
