@@ -5,8 +5,11 @@
 (require 'helm)
 (require 'helm-config)
 
+;; Initialize Helm mode. This is for incremental narrowing of M-x, C-x C-f,
+;; etc., and applies to all Emacs functions that use `completing-read'.
 (helm-mode 1)
 
+;; Automatically resizes Helm buffer if fewer candidates
 (helm-autoresize-mode t)
 
 ;; Fuzzy matching (like flex-matching in IDO)
@@ -18,19 +21,18 @@
 ;; -- RET on directories continues search of it
 ;; -- backspace on beginning of directory goes back a whole directory
 
+;; This is bound to all forms of RET. See keymap.el.
 (setq original-helm-execute-persistent-action
-      (symbol-function 'helm-execute-persistent-action))
+       (symbol-function 'helm-execute-persistent-action))
 (defadvice helm-execute-persistent-action
-  (around helm-find-files-navigate-forward first (&rest args) activate)
+    (around helm-find-files-navigate-forward first (&rest args) activate)
   (if (file-directory-p (helm-get-selection))
       (apply original-helm-execute-persistent-action args)
     (helm-maybe-exit-minibuffer)))
-(define-key helm-map (kbd "RET") 'helm-execute-persistent-action)
-(define-key helm-map (kbd "<return>") 'helm-execute-persistent-action)
-(define-key helm-map (kbd "C-m") 'helm-execute-persistent-action)
 
 (setq original-helm-ff-delete-char-backward
-      (symbol-function 'helm-ff-delete-char-backward))
+       (symbol-function 'helm-ff-delete-char-backward))
+
 (defadvice helm-ff-delete-char-backward
     (around helm-ff-delete-char-backward first (&rest args) activate)
   (if (= (length helm-pattern) (length (helm-find-files-initial-input)))

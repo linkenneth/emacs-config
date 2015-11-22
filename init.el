@@ -27,7 +27,6 @@
 (load "miscellaneous-config.el")
 (setq custom-file "~/.emacs.d/config/custom-config.el")
 (load custom-file)
-(load "marks-and-region-config.el")
 (load "color-theme-config.el")
 (load "backup-config.el")
 (load "speedbar-config.el")

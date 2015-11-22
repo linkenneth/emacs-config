@@ -18,6 +18,13 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/evil/evil-surround")
 (add-to-list 'load-path "~/.emacs.d/plugins/evil/evil-numbers")
 
+;;;;;;;;;;;;;;;;;;;;
+;; Helm-Mode Path ;;
+;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path "~/.emacs.d/plugins/emacs-async")
+(add-to-list 'load-path "~/.emacs.d/plugins/emacs-helm")
+
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; Company-YCMD Path ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
@@ -82,10 +89,3 @@
 
 ;; TODO add back
 ;; (add-to-list 'load-path "~/.emacs.d/plugins/multiple-cursors")
-
-;;;;;;;;;;;;;;;;;;;;
-;; Helm-Mode Path ;;
-;;;;;;;;;;;;;;;;;;;;
-
-(add-to-list 'load-path "~/.emacs.d/plugins/emacs-async")
-(add-to-list 'load-path "~/.emacs.d/plugins/emacs-helm")

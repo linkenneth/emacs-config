@@ -98,3 +98,14 @@
 (if (s-suffix? "mtv.corp.google.com" system-name)
     (global-set-key (kbd "<f8>") 'csearch)
     (global-set-key (kbd "<f8>") 'helm-do-grep))
+
+;;;;;;;;;;;;;;;
+;; Helm Mode ;;
+;;;;;;;;;;;;;;;
+
+(define-key helm-comp-read-must-match-map (kbd "RET")
+  'helm-execute-persistent-action)
+(define-key helm-comp-read-must-match-map (kbd "<return>")
+  'helm-execute-persistent-action)
+(define-key helm-comp-read-must-match-map (kbd "C-m")
+  'helm-execute-persistent-action)
