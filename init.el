@@ -7,6 +7,7 @@
 (require 'benchmark-init-loaddefs)
 (benchmark-init/activate)
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set load paths and environment variables ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -14,11 +15,13 @@
 (add-to-list 'load-path "~/.emacs.d/config")
 (load "load-path-config.el")
 
+
 ;;;;;;;;;;;;;;;;;;;;
 ;; Profiles setup ;;
 ;;;;;;;;;;;;;;;;;;;;
 
 (require 'profile-config)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Miscellaneous setup ;;
@@ -31,11 +34,13 @@
 (load "backup-config.el")
 (load "speedbar-config.el")
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting up Evil Mode ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (load "evil-config.el")
+
 
 ;;;;;;;;;;;;;;;;;;;;
 ;; Setup IDO mode ;;
@@ -44,11 +49,13 @@
 ;; Temporarily turn off IDO mode to try out Helm mode
 ;; (load "ido-config.el")
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting up Helm Mode ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (load "helm-mode-config.el")
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting up YaSnippet ;;
@@ -59,11 +66,13 @@
 
 ;; (load "yasnippet-config.el")
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting up Company-YCMD Mode ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (load "completions-config.el")
+
 
 ;;;;;;;;;;;;;;;;;;;
 ;; Flycheck Mode ;;
@@ -71,11 +80,13 @@
 
 (load "flycheck-config.el")
 
+
 ;;;;;;;;;;;
 ;; CEDET ;;
 ;;;;;;;;;;;
 
 (load "cedet-config.el")
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Elisp Integration into Editing ;;
@@ -83,17 +94,20 @@
 
 (load "elisp-integration-config.el")
 
+
 ;;;;;;;;;;;;;;;;
 ;; CamelScore ;;
 ;;;;;;;;;;;;;;;;
 
 (load "camel-score-config.el")
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; Tramp Mode Config ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
 
 (load "tramp-config.el")
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Various major modes ;;
@@ -144,6 +158,7 @@
 ;; Scala mode
 (load "scala-config.el")
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Various OS-specific Configs ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -157,6 +172,7 @@
 (do-if-profile
  '(:linux :corp :desktop)
  `(progn (load "google-config.el")))
+
 
 ;;;;;;;;;;;;;
 ;; Keymaps ;;

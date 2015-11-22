@@ -2,14 +2,26 @@
 ;; Keymap ;;
 ;;;;;;;;;;;;
 
-;;;;; EVIL ;;;;;
+;; It's much easier to put all keybindings in one place at the end of
+;; initialization so that
+;; 1) it doesn't interfere with certain modes setting keys
+;; 2) it's easier to find keys
+;;
+;; Unfortunately, corp keybindings should not be shared so they exist in a
+;; separate configuration not tracked by git.
+
+
+;;;;;;;;;;;;;;;
+;; Evil Mode ;;
+;;;;;;;;;;;;;;;
+
 ;; Function to undefine Evil commands
 (defun evil-undefine ()
  (interactive)
  (let (evil-mode-map-alist)
    (call-interactively (key-binding (this-command-keys)))))
 
-;; 'jk' as ESC in Evil Insert Mode 
+;; 'jk' and 'kj' as ESC in Evil Insert Mode 
 (define-key evil-insert-state-map "j" #'cofi/maybe-exit-jk)
 (define-key evil-insert-state-map "k" #'cofi/maybe-exit-kj)
 
@@ -27,13 +39,13 @@
 (define-key evil-insert-state-map (kbd "C-y") 'evil-undefine)
 (define-key evil-motion-state-map (kbd "C-y") 'evil-undefine)
 
-;; C-e for end of line like normal
-(define-key evil-insert-state-map (kbd "C-e") 'evil-undefine)
-(define-key evil-motion-state-map (kbd "C-e") 'evil-undefine)
-
 ;; C-a for beginning of line like normal
 (define-key evil-insert-state-map (kbd "C-a") 'evil-undefine)
 (define-key evil-motion-state-map (kbd "C-a") 'evil-undefine)
+
+;; C-e for end of line like normal
+(define-key evil-insert-state-map (kbd "C-e") 'evil-undefine)
+(define-key evil-motion-state-map (kbd "C-e") 'evil-undefine)
 
 ;; C-k for kill-line like normal
 (define-key evil-insert-state-map (kbd "C-k") 'evil-undefine)
@@ -43,38 +55,86 @@
 (define-key evil-ex-completion-map (kbd "M-n") #'next-complete-history-element)
 (define-key evil-ex-completion-map (kbd "M-p") #'previous-complete-history-element)
 
-;; ;; C-a in evil-ex mode to act normally (ie. go to beginning of line)
-;; (define-key evil-ex-completion-map (kbd "C-a") #'move-beginning-of-line)
+;; C-a in evil-ex mode to act normally (ie. go to beginning of line)
+(define-key evil-ex-completion-map (kbd "C-a") #'move-beginning-of-line)
 
-;; \\ is same as C-6 (switch to last used buffer)
+;; \ is same as C-6 (switch to last used buffer)
 (define-key evil-motion-state-map (kbd "\\") 'evil-switch-to-windows-last-buffer)
 
-;;;;; HELM MODE ;;;;;
-(global-set-key (kbd "<f7>") 'helm-occur)
-(global-set-key (kbd "<f8>") 'helm-find)
-(global-set-key (kbd "C-x c r") 'helm-resume)
+;;;;;;;;;;;;;;;
+;; Helm Mode ;;
+;;;;;;;;;;;;;;;
+
+;; Use g h as alternate helm-command-prefix
+(define-key evil-normal-state-map (kbd "g h") 'helm-command-prefix)
+(define-key evil-motion-state-map (kbd "g h") 'helm-command-prefix)
+
+;; g h o as helm-occur (highlights all occurences in file)
+(define-key helm-command-map (kbd "o") 'helm-occur)
+
+;; <f8> should be something that resembles rgrep, but corp projects too large
+;; to use rgrep with.
+(do-if-not-profile
+ '(:linux :corp :desktop)
+ `(global-set-key (kbd "<f8>") 'helm-do-grep))
+
+;; Don't need helm-regexp -- rebind r to helm-resume
+(define-key helm-command-map (kbd "r") 'helm-resume)
+
+;; General apropos always use helm-apropos
 (global-set-key (kbd "<f1> a") 'helm-apropos)
 (global-set-key (kbd "C-h a") 'helm-apropos)
-(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to do persistent action
-(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
-(define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 
-;;;;; SPEEDBAR ;;;;;
+;; Need to specifically define these keys here because generically using
+;; helm-mode does something strange with comp-read. It rebinds another key-map
+;; on top of helm-map, and this key-map doesn't have C-m bindings (so terminal
+;; RET does not work).
+
+(define-key helm-map (kbd "<tab>")
+  'helm-execute-persistent-action)
+(define-key helm-map (kbd "C-i")  ;; Terminal-TAB
+  'helm-execute-persistent-action)
+(define-key helm-map (kbd "C-z")
+  'helm-select-action)  ;; list possible actions using C-z
+(define-key helm-comp-read-must-match-map (kbd "RET")
+  'helm-execute-persistent-action)
+(define-key helm-comp-read-must-match-map (kbd "<return>")
+  'helm-execute-persistent-action)
+(define-key helm-comp-read-must-match-map (kbd "C-m")  ;; Terminal-RET
+  'helm-execute-persistent-action)
+
+
+;;;;;;;;;;;;;;
+;; Speedbar ;;
+;;;;;;;;;;;;;;
+
 (global-set-key (kbd "<f2>") 'sr-speedbar-open-and-select-window)
 (define-key speedbar-buffers-key-map " " 'scroll-up)
 (define-key speedbar-file-key-map " " 'scroll-up)
 (define-key speedbar-buffers-key-map (kbd "DEL") 'scroll-down)
 (define-key speedbar-file-key-map (kbd "DEL") 'scroll-down)
 
-;;;;; FLYCHECK ;;;;;
+
+;;;;;;;;;;;;;;
+;; Flycheck ;;
+;;;;;;;;;;;;;;
+
 (global-set-key (kbd "<f9>") 'flycheck-previous-error)
 (global-set-key (kbd "<f10>") 'flycheck-next-error)
 (global-set-key (kbd "<f11>") 'flycheck-toggle-error-list-or-mode-off)
 
-;;;;; ELISP INTEGRATION ;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;
+;; Elisp Integration ;;
+;;;;;;;;;;;;;;;;;;;;;;;
+
 (global-set-key (kbd "<f12>") 'eval-and-replace-sexp-at-point)
 
-;;;;; COMPANY-YCMD MODE ;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;
+;; Company-YCMD Mode ;;
+;;;;;;;;;;;;;;;;;;;;;;;
+
 (define-key company-mode-map (kbd "TAB") 'company-indent-or-complete-common)
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
@@ -82,30 +142,22 @@
 ;; switch between available backends
 (global-set-key (kbd "C-;") 'company-other-backend)
 
-;;;;; RUBY MODE ;;;;;
-(defun ruby-keys-setup ()
-  (define-key 'ruby-mode-map "\C-c\C-c" 'ruby-send-definition-and-go)
-  (define-key 'ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent))
-(add-hook 'ruby-mode-hook 'ruby-keys-setup)
 
-;;;;; CamelCase / under_score shortcuts ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; CamelCase or snake_case ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (global-set-key (kbd "C-c C--") 'dasherize-word-at-point)
 (global-set-key (kbd "C-c C-_") 'underscore-word-at-point)
 (global-set-key (kbd "C-c C-;") 'camelcase-word-at-point)
 (global-set-key (kbd "C-c C-:") 'colonize-word-at-point)
 
-;;;;; FINDING STUFF ;;;;;
-(if (s-suffix? "mtv.corp.google.com" system-name)
-    (global-set-key (kbd "<f8>") 'csearch)
-    (global-set-key (kbd "<f8>") 'helm-do-grep))
 
 ;;;;;;;;;;;;;;;
-;; Helm Mode ;;
+;; Ruby Mode ;;
 ;;;;;;;;;;;;;;;
 
-(define-key helm-comp-read-must-match-map (kbd "RET")
-  'helm-execute-persistent-action)
-(define-key helm-comp-read-must-match-map (kbd "<return>")
-  'helm-execute-persistent-action)
-(define-key helm-comp-read-must-match-map (kbd "C-m")
-  'helm-execute-persistent-action)
+(defun ruby-keys-setup ()
+  (define-key 'ruby-mode-map "\C-c\C-c" 'ruby-send-definition-and-go)
+  (define-key 'ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent))
+(add-hook 'ruby-mode-hook 'ruby-keys-setup)
