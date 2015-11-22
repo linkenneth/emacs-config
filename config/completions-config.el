@@ -14,14 +14,15 @@
 
 ;; If on OS X (corp or personal laptop). This setup requires a
 ;; specific installation of ycmd in a location I had determined.
-(if (not (s-suffix? "mtv.corp.google.com" system-name))
-    (progn
-      (require 'company-ycmd)
-      (set-variable 'ycmd-server-command '("python" "/usr/local/lib/ycmd/ycmd/__main__.py"))
+(do-if-profile
+ :mac-osx
+ `(progn
+   (require 'company-ycmd)
+   (set-variable 'ycmd-server-command '("python" "/usr/local/lib/ycmd/ycmd/__main__.py"))
 
-      (company-ycmd-setup)
-      (add-hook 'after-init-hook 'global-company-mode)
-      (add-hook 'prog-mode-hook 'ycmd-mode)))
+   (company-ycmd-setup)
+   (add-hook 'after-init-hook 'global-company-mode)
+   (add-hook 'prog-mode-hook 'ycmd-mode)))
 
 (eval-after-load 'company-ycmd
   (progn

@@ -1,18 +1,28 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Set load paths and environment variables ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; Begin benchmarking ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Benchmark startup time! Comment while not testing.
 (add-to-list 'load-path "~/.emacs.d/plugins/benchmark-init")
 (require 'benchmark-init-loaddefs)
 (benchmark-init/activate)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Set load paths and environment variables ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (add-to-list 'load-path "~/.emacs.d/config")
 (load "load-path-config.el")
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Miscellaneous Convenience Setup ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;; Profiles setup ;;
+;;;;;;;;;;;;;;;;;;;;
+
+(require 'profile-config)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Miscellaneous setup ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (load "miscellaneous-config.el")
 (setq custom-file "~/.emacs.d/config/custom-config.el")
@@ -96,53 +106,55 @@
 (load "sass-config.el")
 (load "scss-config.el")
 
-; Emacs Lisp mode
+;; Emacs Lisp mode
 (load "elisp-mode-config.el")
 
-; C-family modes
+;; C-family modes
 (load "c-family-config.el")
 
-; Python mode
+;; Python mode
 (load "python-config.el")
 
-; Cython mode
+;; Cython mode
 (load "cython-config.el")
 
-; Ruby mode
+;; Ruby mode
 (load "ruby-config.el")
 
-; Rails config
+;; Rails config
 (load "rails-config.el")
 
-; Java mode
+;; Java mode
 (load "java-config.el")
 
-; Emacs Speaks Statistics (ESS mode)
+;; Emacs Speaks Statistics (ESS mode)
 (load "ess-config.el")
 
-; Javascript mode
+;; Javascript mode
 (load "js-config.el")
 
-; nXhtml mode
+;; nXhtml mode
 (load "nxhtml-config.el")
 
-; CSV mode
+;; CSV mode
 (load "csv-config.el")
 
-; Scala mode
+;; Scala mode
 (load "scala-config.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Various OS-specific Configs ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; OS X
-(if (string-equal system-type "darwin")
-    (load "osx-config.el"))
+;; OS X
+(do-if-profile
+ :mac-osx
+ `(progn (load "osx-config.el")))
 
-; Corp desktop
-(if (s-suffix? "mtv.corp.google.com" system-name)
-    (load "google-config.el"))
+;; Corp desktop
+(do-if-profile
+ '(:linux :corp :desktop)
+ `(progn (load "google-config.el")))
 
 ;;;;;;;;;;;;;
 ;; Keymaps ;;

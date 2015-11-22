@@ -5,9 +5,6 @@
 ;; Make emacs work with emacsclient and server files
 (server-start)
 
-;; Some basic string manipulation, for rest of the ocnfig
-(require 's)
-
 ;; My name and email
 (setq user-full-name "Kenneth Lin"
       user-mail-address "linkenneth@live.com")
@@ -65,6 +62,3 @@
 ;; If two files d/a1/b/c and d/a2/b/c, give filenames c|a1\b and c|a2\b
 (setq uniquify-buffer-name-style 'post-forward)
 (setq uniquify-strip-common-suffix t)
-
-;; Set fill-column to be almost 80 characters
-(setq-default fill-column 79)
