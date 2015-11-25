@@ -13,9 +13,13 @@
 (helm-autoresize-mode t)
 
 ;; Fuzzy matching (like flex-matching in IDO)
-(setq helm-M-x-fuzzy-match t
+(setq helm-mode-fuzzy-match t
+      helm-M-x-fuzzy-match t
       helm-buffers-fuzzy-matching t
       helm-recentf-fuzzy-match t)
+
+;; Make helm react faster to my fast typing...
+(setq helm-exit-idle-delay 0)
 
 ;; Behave a bit like IDO mode:
 ;; -- RET on directories continues search of it

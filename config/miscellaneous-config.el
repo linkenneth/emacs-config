@@ -68,3 +68,8 @@
 
 ;; Set fill column to be almost 80
 (setq-default fill-column 79)
+
+;; Allow use of mouse in terminal (X window)
+(do-if-profile
+ :terminal
+ `(xterm-mouse-mode 1))

@@ -44,7 +44,9 @@
 
 ;; GNU / Linux Desktop
 (if (string-equal "gnu/linux" system-type)
-    (add-to-list 'profile-config--profiles :linux :desktop))
+    (progn
+      (add-to-list 'profile-config--profiles :linux)
+      (add-to-list 'profile-config--profiles :desktop)))
 
 ;; Terminal vs. GUI
 (if (display-graphic-p)
