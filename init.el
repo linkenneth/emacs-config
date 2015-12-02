@@ -33,6 +33,7 @@
 (load "color-theme-config.el")
 (load "backup-config.el")
 (load "speedbar-config.el")
+(load "semantic-config.el")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;

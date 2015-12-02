@@ -11,3 +11,4 @@ ido.last
 config/google-config.el
 session.*
 recentf
+semanticdb/

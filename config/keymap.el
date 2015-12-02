@@ -140,6 +140,7 @@
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 
 ;; switch between available backends
+;; TODO C-; doesn't work well in terminal
 (global-set-key (kbd "C-;") 'company-other-backend)
 
 
@@ -147,6 +148,7 @@
 ;; CamelCase or snake_case ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; TODO C-; doesn't work well in terminal
 (global-set-key (kbd "C-c C--") 'dasherize-word-at-point)
 (global-set-key (kbd "C-c C-_") 'underscore-word-at-point)
 (global-set-key (kbd "C-c C-;") 'camelcase-word-at-point)
