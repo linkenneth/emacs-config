@@ -72,11 +72,7 @@
 ;; g h o as helm-occur (highlights all occurences in file)
 (define-key helm-command-map (kbd "o") 'helm-occur)
 
-;; <f8> should be something that resembles rgrep, but corp projects too large
-;; to use rgrep with.
-(do-if-not-profile
- '(:linux :corp :desktop)
- `(global-set-key (kbd "<f8>") 'helm-do-grep))
+(global-set-key (kbd "<f8>") 'helm-do-grep)
 
 ;; Don't need helm-regexp -- rebind r to helm-resume
 (define-key helm-command-map (kbd "r") 'helm-resume)
