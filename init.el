@@ -33,6 +33,7 @@
 (load "color-theme-config.el")
 (load "backup-config.el")
 (load "speedbar-config.el")
+;; TODO figure out if Semantic's SymRef (C-c , g) conflicts with Gro
 (load "semantic-config.el")
 
 
@@ -93,6 +94,7 @@
 ;; Elisp Integration into Editing ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; TODO make this work anywhere in the sexp
 (load "elisp-integration-config.el")
 
 
@@ -100,6 +102,7 @@
 ;; CamelScore ;;
 ;;;;;;;;;;;;;;;;
 
+;; TODO make the keybindings work in terminal
 (load "camel-score-config.el")
 
 
