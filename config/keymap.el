@@ -10,6 +10,8 @@
 ;; Unfortunately, corp keybindings should not be shared so they exist in a
 ;; separate configuration not tracked by git.
 
+;; TODO organize this a bit and comment a bit more.
+
 
 ;;;;;;;;;;;;;;;
 ;; Evil Mode ;;
@@ -21,9 +23,9 @@
  (let (evil-mode-map-alist)
    (call-interactively (key-binding (this-command-keys)))))
 
-;; 'jk' and 'kj' as ESC in Evil Insert Mode 
-(define-key evil-insert-state-map "j" #'cofi/maybe-exit-jk)
-(define-key evil-insert-state-map "k" #'cofi/maybe-exit-kj)
+;; j k / k j as ESC Evil Insert Mode
+(define-key evil-insert-state-map "j" #'maybe-exit-jk)
+(define-key evil-insert-state-map "k" #'maybe-exit-kj)
 
 ;; scroll binding to SPC and DEL
 (define-key evil-normal-state-map (kbd "DEL") 'scroll-down)
@@ -71,6 +73,7 @@
 
 ;; g h o as helm-occur (highlights all occurences in file)
 (define-key helm-command-map (kbd "o") 'helm-occur)
+(define-key helm-command-map (kbd "O") 'helm-occur-from-isearch)
 
 (global-set-key (kbd "<f8>") 'helm-do-grep)
 

@@ -22,7 +22,7 @@
 (setq evil-want-visual-char-semi-exclusive t)
 
 ;; 'jk' as ESC;; see keymap.el
-(evil-define-command cofi/maybe-exit-jk ()
+(evil-define-command maybe-exit-jk ()
   :repeat change
   (interactive)
   (let ((modified (buffer-modified-p)))
@@ -39,7 +39,7 @@
 					      (list evt))))))))
 
 ;; 'kj' as ESC;; see keymap.el
-(evil-define-command cofi/maybe-exit-kj ()
+(evil-define-command maybe-exit-kj ()
   :repeat change
   (interactive)
   (let ((modified (buffer-modified-p)))
