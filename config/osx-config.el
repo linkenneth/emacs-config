@@ -5,9 +5,6 @@
 ; Change meta to be command (default alt / option)
 (setq mac-command-modifier 'meta)
 
-; Sets default font on OS X
-(add-to-list 'default-frame-alist '(font . "Monaco"))
-
 ;;;;; Aquamacs-specific config ;;;;;
 (if (featurep 'aquamacs)
     (progn
