@@ -64,5 +64,18 @@
 (setq evil-visual-state-cursor '("royalblue" t))
 (setq evil-replace-state-cursor '("red" t))
 
+
+(evil-define-command evil-switch-to-last-buffer-other-window ()
+  "Switch to last open buffer in other window.
+
+See evil-switch-to-windows-last-buffer for more info. This
+function does the same thing in the other window."
+  :repeat nil
+  (let ((previous-place (evil-alternate-buffer)))
+    (when previous-place
+      (other-window 1)
+      (switch-to-buffer (car previous-place))
+      (goto-char (car (last previous-place))))))
+
 ;; Initialize Evil
 (evil-mode 1)

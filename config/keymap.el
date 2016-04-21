@@ -63,6 +63,9 @@
 ;; \ is same as C-6 (switch to last used buffer)
 (define-key evil-motion-state-map (kbd "\\") 'evil-switch-to-windows-last-buffer)
 
+;; C-\ is switch to last used buffer in other window.
+(define-key evil-motion-state-map (kbd "C-\\") 'evil-switch-to-last-buffer-other-window)
+
 ;;;;;;;;;;;;;;;
 ;; Helm Mode ;;
 ;;;;;;;;;;;;;;;
@@ -79,6 +82,13 @@
 
 ;; Don't need helm-regexp -- rebind r to helm-resume
 (define-key helm-command-map (kbd "r") 'helm-resume)
+
+;; Helm-specific files and buffer commands. These are basically strictly better
+;; version of C-x C-f and C-x b.
+(define-key helm-command-map (kbd "f") 'helm-find-files)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(define-key helm-command-map (kbd "b") 'helm-mini)
+(global-set-key (kbd "C-x b") 'helm-mini)
 
 ;; General apropos always use helm-apropos
 (global-set-key (kbd "<f1> a") 'helm-apropos)

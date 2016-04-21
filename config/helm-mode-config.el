@@ -21,6 +21,9 @@
 ;; Make helm react faster to my fast typing...
 (setq helm-exit-idle-delay 0)
 
+;; Set the maximum buffer name length to be longer (20 is default).
+(setq helm-buffer-max-length 40)
+
 ;; Behave a bit like IDO mode:
 ;; -- RET on directories continues search of it
 ;; -- backspace on beginning of directory goes back a whole directory
