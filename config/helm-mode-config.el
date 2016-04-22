@@ -33,9 +33,11 @@
        (symbol-function 'helm-execute-persistent-action))
 (defadvice helm-execute-persistent-action
     (around helm-find-files-navigate-forward first (&rest args) activate)
-  (if (file-directory-p (helm-get-selection))
-      (apply original-helm-execute-persistent-action args)
-    (helm-maybe-exit-minibuffer)))
+  (let ((selection (helm-get-selection)))
+    (if (and (stringp (helm-get-selection))
+             (file-directory-p (helm-get-selection)))
+        (apply original-helm-execute-persistent-action args)
+      (helm-maybe-exit-minibuffer))))
 
 (setq original-helm-ff-delete-char-backward
        (symbol-function 'helm-ff-delete-char-backward))

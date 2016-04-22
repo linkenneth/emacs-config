@@ -12,3 +12,4 @@ config/google-config.el
 session.*
 recentf
 semanticdb/
+url/
