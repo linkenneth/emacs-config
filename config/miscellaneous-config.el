@@ -73,3 +73,6 @@
 (do-if-profile
  :terminal
  `(xterm-mouse-mode 1))
+
+;; Allows cursors to follow along with compilation logs.
+(setq compilation-scroll-output t)

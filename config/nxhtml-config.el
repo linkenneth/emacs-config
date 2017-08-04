@@ -2,6 +2,7 @@
 ;; nXhtml ;;
 ;;;;;;;;;;;;
 
+(setq css-indent-offset 2)
 ;; ;; TODO fix this and make this fast when I start using it
 ;; (load "~/.emacs.d/plugins/nxhtml/autostart.el")
 

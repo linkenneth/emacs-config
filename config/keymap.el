@@ -60,11 +60,11 @@
 ;; C-a in evil-ex mode to act normally (ie. go to beginning of line)
 (define-key evil-ex-completion-map (kbd "C-a") #'move-beginning-of-line)
 
-;; \ to switch to other window (same as C-x o)
-(define-key evil-motion-state-map (kbd "\\") 'other-window)
+;; \ is same as C-6 (switch to last used buffer)
+(define-key evil-motion-state-map (kbd "\\") 'evil-switch-to-windows-last-buffer)
 
-;; C-\ is same as C-6 (switch to last used buffer)
-(define-key evil-motion-state-map (kbd "C-\\") 'evil-switch-to-windows-last-buffer)
+;; C-\ to switch to other window (same as C-x o)
+(define-key evil-motion-state-map (kbd "C-\\") 'other-window)
 
 
 ;;;;;;;;;;;;;;;
@@ -79,7 +79,7 @@
 (define-key helm-command-map (kbd "o") 'helm-occur)
 (define-key helm-command-map (kbd "O") 'helm-occur-from-isearch)
 
-(global-set-key (kbd "<f8>") 'helm-do-grep)
+;; (global-set-key (kbd "<f8>") 'helm-do-grep)
 
 ;; Don't need helm-regexp -- rebind r to helm-resume
 (define-key helm-command-map (kbd "r") 'helm-resume)

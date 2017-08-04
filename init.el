@@ -177,7 +177,6 @@
  '(:linux :corp :desktop)
  `(progn (load "google-config.el")))
 
-
 ;;;;;;;;;;;;;
 ;; Keymaps ;;
 ;;;;;;;;;;;;;
