@@ -1,6 +1,6 @@
-;;;;;;;;;;;;;;;;;;;;;;;;
-;; Python Mode Config ;;
-;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Python mode configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun python-mode-setup ()
   ; Reinstate current directory
@@ -11,3 +11,5 @@
 
 ; Tupperware = Python
 (add-to-list 'auto-mode-alist '("\\.tw" . python-mode))
+
+(provide 'python-mode-config)

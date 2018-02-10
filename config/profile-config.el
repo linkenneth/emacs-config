@@ -1,6 +1,6 @@
-;;;;;;;;;;;;;;;;;;;;
-;; Profile Config ;;
-;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Profile configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 's)
 
@@ -52,6 +52,5 @@
 (if (display-graphic-p)
     (add-to-list 'profile-config--profiles :gui)
   (add-to-list 'profile-config--profiles :terminal))
-
 
 (provide 'profile-config)

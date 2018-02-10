@@ -21,3 +21,5 @@
   (if (not (sr-speedbar-exist-p))
       (sr-speedbar-toggle))
   (sr-speedbar-select-window))
+
+(provide 'speedbar-config)

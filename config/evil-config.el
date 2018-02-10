@@ -1,6 +1,6 @@
-;;;;;;;;;;;;;;;;;
-;; Evil Config ;;
-;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; Evil configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Base vim emulation layer on Emacs
 (package-activate 'evil)
@@ -16,12 +16,14 @@
 (require 'evil-numbers)
 
 ;; Evil text object between (vim controls for 'i', 'a' commands)
+;; TODO find equivalent in ELPA
 ;; (require 'evil-textobj-between)
 
 ;; End of line visual selection to not include EOL character
 (setq evil-want-visual-char-semi-exclusive t)
 
-;; 'jk' as ESC;; see keymap.el
+;; Use 'jk' as an alternative to ESC. See keymap.el.
+;; TODO: can we consolidate these methods?
 (evil-define-command maybe-exit-jk ()
   :repeat change
   (interactive)
@@ -38,7 +40,7 @@
        (t (setq unread-command-events (append unread-command-events
 					      (list evt))))))))
 
-;; 'kj' as ESC;; see keymap.el
+;; Use 'kj' as an alternative to ESC. See keymap.el.
 (evil-define-command maybe-exit-kj ()
   :repeat change
   (interactive)
@@ -79,3 +81,5 @@ function does the same thing in the other window."
 
 ;; Initialize Evil
 (evil-mode 1)
+
+(provide 'evil-config)

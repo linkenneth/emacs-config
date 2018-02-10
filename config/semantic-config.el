@@ -9,3 +9,5 @@
 ;; g-h-i.
 
 (semantic-mode 1)
+
+(provide 'semantic-config)

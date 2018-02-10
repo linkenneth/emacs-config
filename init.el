@@ -1,13 +1,3 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Initialization benchmarking ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; ;; Benchmark startup time! Comment while not testing.
-;; (add-to-list 'load-path "~/.emacs.d/plugins/benchmark-init")
-;; (require 'benchmark-init-loaddefs)
-;; (benchmark-init/activate)
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set load paths and environment variables ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -16,39 +6,52 @@
 (load "load-path-config.el")
 
 
-;;;;;;;;;;;;;;;;;;;;
-;; Profiles setup ;;
-;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Profile configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'profile-config)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;
-;; ELPA package setup ;;
-;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Package configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(load "package-config.el")
+(require 'package-config)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Miscellaneous setup ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Initialization benchmarking ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(load "miscellaneous-config.el")
+;; Benchmark startup time! Comment out while not testing.
+;;
+;; NOTE: benchmark-init relies on its package being loaded, which means that
+;; benchmark won't track the amount of time spent in package-loading itself.
+(require 'benchmark-config)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Miscellaneous configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (setq custom-file "~/.emacs.d/config/custom-config.el")
 (load custom-file)
-(load "color-theme-config.el")
-(load "backup-config.el")
-(load "speedbar-config.el")
+
+(require 'miscellaneous-config)
+(require 'color-theme-config)
+(require 'backup-config)
+
+(require 'speedbar-config)
 ;; TODO figure out if Semantic's SymRef (C-c , g) conflicts with Grok
-(load "semantic-config.el")
+(require 'semantic-config)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Setting up Evil Mode ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; Evil configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
 
-(load "evil-config.el")
+(require 'evil-config)
 
 
 ;;;;;;;;;;;;;;;;;;;;
@@ -59,11 +62,11 @@
 ;; (load "ido-config.el")
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Setting up Helm Mode ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Helm mode configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(load "helm-mode-config.el")
+(require 'helm-mode-config)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -80,21 +83,14 @@
 ;; Setting up Company-YCMD Mode ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(load "completions-config.el")
+(require 'completions-config)
 
 
 ;;;;;;;;;;;;;;;;;;;
 ;; Flycheck Mode ;;
 ;;;;;;;;;;;;;;;;;;;
 
-(load "flycheck-config.el")
-
-
-;;;;;;;;;;;
-;; CEDET ;;
-;;;;;;;;;;;
-
-(load "cedet-config.el")
+(require 'flycheck-config)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -102,7 +98,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; TODO make this work anywhere in the sexp
-(load "elisp-integration-config.el")
+(require 'elisp-integration-config)
 
 
 ;;;;;;;;;;;;;;;;
@@ -117,7 +113,7 @@
 ;; Tramp Mode Config ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
 
-(load "tramp-config.el")
+(require 'tramp-config)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -125,25 +121,26 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Markup modes
-(load "tex-config.el")
-(load "text-mode-config.el")
-(load "jade-stylus-config.el")
-(load "haml-config.el")
-(load "yaml-config.el")
-(load "sass-config.el")
-(load "scss-config.el")
+;; (require 'tex-config)
+(require 'text-mode-config)
+;; (require 'jade-mode-config)
+;; (require 'stylus-mode-config)
+;; (require 'haml-mode-config)
+;; (require 'yaml-mode-config)
+;; (require 'sass-mode-config)
+;; (require 'scss-mode-config)
 
 ;; Emacs Lisp mode
-(load "elisp-mode-config.el")
+(require 'elisp-mode-config)
 
-;; C-family modes
-(load "c-family-config.el")
+;; C mode
+(require 'c-mode-config)
 
 ;; Python mode
-(load "python-config.el")
+(require 'python-mode-config)
 
 ;; Cython mode
-(load "cython-config.el")
+(require 'cython-mode-config)
 
 ;; Ruby mode
 (load "ruby-config.el")
@@ -158,16 +155,13 @@
 (load "ess-config.el")
 
 ;; Javascript mode
-(load "js-config.el")
-
-;; nXhtml mode
-(load "nxhtml-config.el")
+(require 'js-mode-config)
 
 ;; CSV mode
-(load "csv-config.el")
+(require 'csv-mode-config)
 
 ;; Scala mode
-(load "scala-config.el")
+(require 'scala-mode-config)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -184,8 +178,21 @@
  '(:linux :corp :desktop)
  `(progn (load "google-config.el")))
 
+
 ;;;;;;;;;;;;;
 ;; Keymaps ;;
 ;;;;;;;;;;;;;
 
 (load "keymap.el")
+
+
+;;;;;;;;;;;;;;;;;;
+;; Emacs server ;;
+;;;;;;;;;;;;;;;;;;
+
+;; Run emacs as a server so that startup cost is paid once per session.
+;;
+;; NOTE: (server-start) should reside at the bottom of the configuration so
+;; that any misconfiguration should not be starting in server mode.
+;; TODO: attempt to enable server mode only when not already up?
+(server-start)

@@ -1,11 +1,15 @@
-;;;;;;;;;;;;;;;
-;; TeX Setup ;;
-;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;
+;; TeX configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;
+
+;; TODO: I suspect that all of this is broken, what with the new ELPA package
+;; configuration amongst other things. Consider fixing this if I ever need to
+;; do extensive work in TeX again.
 
 ; OS X setup
 (defun osx-tex-mode-setup ()
   (load "auctex.el" nil t t)
-  (require  'tex-mik)
+  (require 'tex-mik)
 
   (setq reftex-plug-into-AUCTeX t)
 
@@ -27,3 +31,5 @@
 (do-if-profile
  :mac-osx
  `(add-hook 'LaTeX-mode-hook 'osx-tex-mode-setup))
+
+(provide 'tex-config)

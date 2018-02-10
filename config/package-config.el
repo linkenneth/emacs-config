@@ -1,20 +1,23 @@
-;;;;;;;;;;;;;;;;
-;; Main Paths ;;
-;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Package configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'package)
+(require 'profile-config)
 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-
-;; Do not add auto-generated "(package-initialize)" to my init file.
-(setq package--init-file-ensured t)
-
 (setq package-user-dir "~/.emacs.d/packages")
 
-;; Mac OS X correct permissions handling
+;; Prevent auto-generated '(package-initialize)' from being added to init.el.
+(setq package--init-file-ensured t)
+
+;; Add missing trusted LibreSSL certificates on Mac OS X.
+;; (https://blog.vifortech.com/posts/emacs-tls-fix/)
 (do-if-profile 
  (require 'gnutls)
  (add-to-list 'gnutls-trustfiles "/usr/local/etc/openssl/cert.pem"))
 
 ;; Initialize ELPA, but don't activate packages until later.
 (package-initialize t)
+
+(provide 'package-config)

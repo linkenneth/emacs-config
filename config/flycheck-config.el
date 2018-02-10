@@ -43,3 +43,5 @@
     ;; be fixed in 24.5+)
     (when (not (display-graphic-p))
       (setq flycheck-indication-mode nil))))
+
+(provide 'flycheck-config)

@@ -1,0 +1,5 @@
+The plugins/ directory used to be the single source for where my plugins
+live. However, I have since changed to relying on the package manager ELPA to
+handle the majority of my packages. ELPA doesn't have everything, however, so
+this folder remains a place to put custom scripts and small patches that aren't
+uploaded to MELPA or other repositories.

@@ -1,6 +1,6 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Emacs Lisp Mode Config ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Emacs Lisp mode configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun emacs-lisp-mode-setup ()
   ;; TODO has problems with flycheck's elisp checker. Also, consider
@@ -13,3 +13,5 @@
   (setq flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
 
 (add-hook 'emacs-lisp-mode-hook 'emacs-lisp-mode-setup)
+
+(provide 'elisp-mode-config)

@@ -1,9 +1,8 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Miscellaneous Config ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Miscellaneous configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Make emacs work with emacsclient and server files
-(server-start)
+(require 'profile-config)
 
 ;; My name and email
 (setq user-full-name "Kenneth Lin"
@@ -11,18 +10,6 @@
 
 ;; Set title to be name of document
 (setq frame-title-format '("Emacs @ " system-name ": %b %+%+ %f"))
-
-;; Icomplete mode - autocompletion in the minibuffer
-(icomplete-mode 1)
-
-;; Disable tool bars
-(tool-bar-mode -1)
-
-;; Disable scroll bars
-(scroll-bar-mode -1)
-
-;; Global line number mode
-(global-linum-mode 1)
 
 ;; Undo-tree mode
 ;; TODO: appears to be a dependency. Can we call this elsewhere?
@@ -38,14 +25,13 @@
 ;; Make emacs use clipboard - cross-program copying
 (setq x-select-enable-clipboard t)
 
-;; Automatically reloads buffer on changes to a file
-(global-auto-revert-mode 1)
-
 ;; Don't ask for killing server buffers and processes (like shells)
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 (remove-hook 'kill-buffer-query-functions 'process-kill-buffer-query-function)
 
-;; Disable version control through emacs (DO IT THROUGH COMMAND LINE!) (much much faster)
+;; Disable version control through emacs. It's much easier to use it through
+;; any command line, and version control for emacs with big projects is also
+;; impossible to work with.
 (setq vc-handled-backends ())
 
 ;; Delete Selection mode -- used while in typing mode with selected text
@@ -56,6 +42,21 @@
 
 ;; Automatically insert ')' when '(' is inserted
 ;; (electric-pair-mode)
+
+;; Icomplete mode - autocompletion in the minibuffer
+(icomplete-mode 1)
+
+;; Disable tool bars
+(tool-bar-mode -1)
+
+;; Disable scroll bars
+(scroll-bar-mode -1)
+
+;; Global line number mode
+(global-linum-mode 1)
+
+;; Automatically reloads buffer on changes to a file
+(global-auto-revert-mode 1)
 
 ;; Automatically indents current line and previous line when RET is hit
 (electric-indent-mode)
@@ -77,3 +78,5 @@
 
 ;; Allows cursors to follow along with compilation logs.
 (setq compilation-scroll-output t)
+
+(provide 'miscellaneous-config)

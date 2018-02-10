@@ -13,3 +13,5 @@
 	(setq sexp (preceding-sexp))
 	(backward-kill-sexp)))
     (insert (format "%s" (eval sexp)))))
+
+(provide 'elisp-integration-config)

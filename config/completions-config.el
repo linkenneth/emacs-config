@@ -36,3 +36,5 @@
     ;; RET), matching is required. This disables it and makes
     ;; auto-completion completely non-intrusive.
     (setq company-require-match nil)))
+
+(provide 'completions-config)

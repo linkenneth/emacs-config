@@ -1,6 +1,6 @@
-;;;;;;;;;;;;;;;;;;;;;;
-;; Helm Mode Config ;;
-;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Helm mode configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (package-activate 'helm)
 (require 'helm)
@@ -48,3 +48,5 @@
   (if (= (length helm-pattern) (length (helm-find-files-initial-input)))
       (helm-find-files-up-one-level 1)
     (apply original-helm-ff-delete-char-backward args)))
+
+(provide 'helm-mode-config)
