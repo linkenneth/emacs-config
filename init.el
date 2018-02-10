@@ -40,7 +40,7 @@
 (load "color-theme-config.el")
 (load "backup-config.el")
 (load "speedbar-config.el")
-;; TODO figure out if Semantic's SymRef (C-c , g) conflicts with Gro
+;; TODO figure out if Semantic's SymRef (C-c , g) conflicts with Grok
 (load "semantic-config.el")
 
 
