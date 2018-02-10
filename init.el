@@ -1,11 +1,11 @@
-;;;;;;;;;;;;;;;;;;;;;;;;
-;; Begin benchmarking ;;
-;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Initialization benchmarking ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Benchmark startup time! Comment while not testing.
-(add-to-list 'load-path "~/.emacs.d/plugins/benchmark-init")
-(require 'benchmark-init-loaddefs)
-(benchmark-init/activate)
+;; ;; Benchmark startup time! Comment while not testing.
+;; (add-to-list 'load-path "~/.emacs.d/plugins/benchmark-init")
+;; (require 'benchmark-init-loaddefs)
+;; (benchmark-init/activate)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -21,6 +21,13 @@
 ;;;;;;;;;;;;;;;;;;;;
 
 (require 'profile-config)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; ELPA package setup ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+(load "package-config.el")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
