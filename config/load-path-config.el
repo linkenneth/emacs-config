@@ -89,3 +89,15 @@
 
 ;; TODO add back
 ;; (add-to-list 'load-path "~/.emacs.d/plugins/multiple-cursors")
+
+;;;;;;;;;;;;;;;;;;;
+;; JS2 Mode Path ;;
+;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path "~/.emacs.d/plugins/js2-mode")
+
+;;;;;;;;;;;;;;;;;;;;
+;; RJSX Mode Path ;;
+;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path "~/.emacs.d/plugins/rjsx-mode")
