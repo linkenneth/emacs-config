@@ -20,15 +20,16 @@
 ;; (autoload 'jde-mode "jde" "JDE mode." t)
 ;; (setq auto-mode-alist (append '(("\\.java\\'" . jde-mode)) auto-mode-alist))
 
-(defun jde-mode-setup ()
-  ;; Flymake for Java
-  (require 'jde-eclipse-compiler-server)
+; TODO jde-eclipse-compiler-server may be outdated. There may be a better way to do this now.
+;; (defun jde-mode-setup ()
+;;   ;; Flymake for Java
+;;   (require 'jde-eclipse-compiler-server)
 
-  ;; (setq jde-sourcepath (sourcepath-colon-path (getenv "PATH")))
-  (setq jde-sourcepath nil)
-  (setq jde-compiler '(("eclipse java compiler server" "/usr/share/java/ecj.jar")))
+;;   ;; (setq jde-sourcepath (sourcepath-colon-path (getenv "PATH")))
+;;   (setq jde-sourcepath nil)
+;;   (setq jde-compiler '(("eclipse java compiler server" "/usr/share/java/ecj.jar")))
 
-  ;; Use Java 1.7 compliance for ecj
-  (setq jde-ecj-command-line-args '("-d" "none" "-1.7")))
+;;   ;; Use Java 1.7 compliance for ecj
+;;   (setq jde-ecj-command-line-args '("-d" "none" "-1.7")))
 
 (eval-after-load "jde" '(jde-mode-setup))

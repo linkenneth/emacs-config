@@ -1,4 +1,0 @@
-# name: time now
-# key: now
-# --
-`(current-time-string)`

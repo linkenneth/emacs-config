@@ -25,8 +25,9 @@
 (global-linum-mode 1)
 
 ;; Undo-tree mode
-(require 'undo-tree)
-(undo-tree-mode 1)
+;; TODO: appears to be a dependency. Can we call this elsewhere?
+;(require 'undo-tree)
+;(undo-tree-mode 1)
 
 ;; Inhibit startup screen
 (setq inhibit-startup-screen t)

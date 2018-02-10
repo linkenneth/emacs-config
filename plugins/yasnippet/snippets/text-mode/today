@@ -1,4 +1,0 @@
-# name: today's date
-# key: today
-# --
-`(format-time-string "%A, %B %e, %Y")`
