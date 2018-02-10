@@ -17,6 +17,7 @@
 (do-if-profile
  :mac-osx
  `(progn
+   (package-activate 'company-ycmd)
    (require 'company-ycmd)
    (set-variable 'ycmd-server-command '("python" "/usr/local/lib/ycmd/ycmd/__main__.py"))
 

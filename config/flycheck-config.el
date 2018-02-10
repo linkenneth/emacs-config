@@ -6,6 +6,7 @@
 (do-if-not-profile
  '(:linux :corp :desktop)
  `(progn
+    (package-activate 'flycheck-ycmd)
     (require 'flycheck-ycmd)
     (flycheck-ycmd-setup)
     (add-hook 'prog-mode-hook 'flycheck-mode)))
@@ -37,6 +38,7 @@
 (eval-after-load 'flycheck
   (progn
     ;; Make Flycheck show error in tooltip as opposed to bottom bar
+    (package-activate 'flycheck-pos-tip)
     (require 'flycheck-pos-tip)
     (setq flycheck-display-errors-function 'flycheck-pos-tip-error-messages)
 
