@@ -22,8 +22,8 @@
 ;; Helm-Mode Path ;;
 ;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path "~/.emacs.d/plugins/emacs-async")
-(add-to-list 'load-path "~/.emacs.d/plugins/emacs-helm")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/emacs-async")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/emacs-helm")
 
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; Company-YCMD Path ;;

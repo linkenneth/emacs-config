@@ -2,6 +2,7 @@
 ;; Helm Mode Config ;;
 ;;;;;;;;;;;;;;;;;;;;;;
 
+(package-activate 'helm)
 (require 'helm)
 (require 'helm-config)
 

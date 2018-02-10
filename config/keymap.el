@@ -116,12 +116,13 @@
 ;; helm-mode does something strange with comp-read. It rebinds another key-map
 ;; on top of helm-map, and this key-map doesn't have C-m bindings (so terminal
 ;; RET does not work).
-(define-key helm-comp-read-must-match-map (kbd "RET")
-  'helm-execute-persistent-action)
-(define-key helm-comp-read-must-match-map (kbd "<return>")
-  'helm-execute-persistent-action)
-(define-key helm-comp-read-must-match-map (kbd "C-m")  ;; Terminal-RET
-  'helm-execute-persistent-action)
+;; TODO: fix these. (void-variable helm-comp-read-must-match-map)
+;;(define-key helm-comp-read-must-match-map (kbd "RET")
+  ;;'helm-execute-persistent-action)
+;;(define-key helm-comp-read-must-match-map (kbd "<return>")
+  ;;'helm-execute-persistent-action)
+;;(define-key helm-comp-read-must-match-map (kbd "C-m")  ;; Terminal-RET
+  ;;'helm-execute-persistent-action)
 
 
 ;;;;;;;;;;;;;;
