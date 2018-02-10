@@ -2,6 +2,7 @@
 ;; Color Theme Customization ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(package-activate 'color-theme)
 (require 'monokai-theme)
 
 ; Sets default font on OS X
