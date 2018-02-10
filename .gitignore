@@ -6,7 +6,7 @@ ac-comphist.dat
 tramp
 plugins/nxhtml/etc/schema/xhtml-loader.rnc
 *.elc
-elpa/
+packages/
 ido.last
 config/google-config.el
 session.*
