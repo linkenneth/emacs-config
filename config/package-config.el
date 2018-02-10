@@ -9,6 +9,8 @@
 ;; Do not add auto-generated "(package-initialize)" to my init file.
 (setq package--init-file-ensured t)
 
+(setq package-user-dir "~/.emacs.d/packages")
+
 ;; Mac OS X correct permissions handling
 (do-if-profile 
  (require 'gnutls)
