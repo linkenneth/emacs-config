@@ -3,20 +3,20 @@
 ;;;;;;;;;;;;;;;;;
 
 ;; Base vim emulation layer on Emacs
+(package-activate 'evil)
 (require 'evil)
 
 ;; Evil-surround (vim controls for 's' commands)
-(require 'surround)
-(global-surround-mode 1)
+(package-activate 'evil-surround)
+(require 'evil-surround)
+(global-evil-surround-mode 1)
 
 ;; Evil-numbers (increment / decrement numbers like in vim)
+(package-activate 'evil-numbers)
 (require 'evil-numbers)
 
 ;; Evil text object between (vim controls for 'i', 'a' commands)
-(require 'evil-textobj-between)
-
-;; Evil hexl-mode patch
-(require 'hexl-evil-patch)
+;; (require 'evil-textobj-between)
 
 ;; End of line visual selection to not include EOL character
 (setq evil-want-visual-char-semi-exclusive t)
