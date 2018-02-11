@@ -20,6 +20,8 @@
 ;; Evil Mode ;;
 ;;;;;;;;;;;;;;;
 
+;; TODO see if there are any better ways to undefine a key now.
+
 (defun evil-undefine ()
   "Undefines an Evil command."
  (interactive)
@@ -82,7 +84,8 @@
 (define-key helm-command-map (kbd "o") 'helm-occur)
 (define-key helm-command-map (kbd "O") 'helm-occur-from-isearch)
 
-;; (global-set-key (kbd "<f8>") 'helm-do-grep)
+(define-key helm-command-map (kbd "g") 'helm-grep-do-git-grep)
+(define-key helm-command-map (kbd "l") 'helm-locate)
 
 ;; Don't need helm-regexp -- rebind r to helm-resume
 (define-key helm-command-map (kbd "r") 'helm-resume)
@@ -94,7 +97,7 @@
 (define-key helm-command-map (kbd "b") 'helm-mini)
 (global-set-key (kbd "C-x b") 'helm-mini)
 
-;; (global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-x") 'helm-M-x)
 
 ;; General apropos always use helm-apropos
 (global-set-key (kbd "<f1> a") 'helm-apropos)

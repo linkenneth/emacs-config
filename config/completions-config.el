@@ -25,6 +25,9 @@
    (add-hook 'after-init-hook 'global-company-mode)
    (add-hook 'prog-mode-hook 'ycmd-mode)))
 
+;; TODO: can we merge backend lists?
+;; TODO: can we add some language-aware lists?
+
 (eval-after-load 'company-ycmd
   (progn
     ;; Only need one character and 0 seconds (instant) to begin completion
