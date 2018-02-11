@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (add-to-list 'load-path "~/.emacs.d/config")
-(load "load-path-config.el")
+(require 'load-path-config)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -30,6 +30,7 @@
 ;; benchmark won't track the amount of time spent in package-loading itself.
 (require 'benchmark-config)
 
+;; TODO: consider byte-compiling init / configuration files / non-ELPA plugins
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Miscellaneous configuration ;;
@@ -43,7 +44,7 @@
 (require 'backup-config)
 
 (require 'speedbar-config)
-;; TODO figure out if Semantic's SymRef (C-c , g) conflicts with Grok
+;; TODO: figure out if Semantic's SymRef (C-c , g) conflicts with Grok
 (require 'semantic-config)
 
 
@@ -143,19 +144,22 @@
 (require 'cython-mode-config)
 
 ;; Ruby mode
-(load "ruby-config.el")
-
-;; Rails config
-(load "rails-config.el")
+(require 'ruby-mode-config)
 
 ;; Java mode
-(load "java-config.el")
+(require 'java-mode-config)
 
 ;; Emacs Speaks Statistics (ESS mode)
-(load "ess-config.el")
+(require 'ess-mode-config)
 
-;; Javascript mode
+;; js-mode
 (require 'js-mode-config)
+
+;; js2-mode (enhanced JS mode)
+(require 'js2-mode-config)
+
+;; ReactJS / JSX mode
+(require 'rjsx-mode-config)
 
 ;; CSV mode
 (require 'csv-mode-config)
@@ -183,7 +187,7 @@
 ;; Keymaps ;;
 ;;;;;;;;;;;;;
 
-(load "keymap.el")
+(require 'keymap-config)
 
 
 ;;;;;;;;;;;;;;;;;;

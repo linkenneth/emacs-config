@@ -4,7 +4,6 @@
 
 (require 'profile-config)
 
-;; My name and email
 (setq user-full-name "Kenneth Lin"
       user-mail-address "linkenneth@live.com")
 
@@ -16,13 +15,15 @@
 ;(require 'undo-tree)
 ;(undo-tree-mode 1)
 
-;; Inhibit startup screen
 (setq inhibit-startup-screen t)
+(setq-default fill-column 80)
+(add-to-list 'default-aframe-alist '(height . 50))
+(add-to-list 'default-aframe-alist '(width. 80))
 
 ;; Scrolling context lines
 (setq next-screen-context-lines 5)
 
-;; Make emacs use clipboard - cross-program copying
+;; Make emacs use clipboard for cross-program copying
 (setq x-select-enable-clipboard t)
 
 ;; Don't ask for killing server buffers and processes (like shells)
@@ -34,14 +35,11 @@
 ;; impossible to work with.
 (setq vc-handled-backends ())
 
-;; Delete Selection mode -- used while in typing mode with selected text
+;; Delete selection when typing with text selected
 (delete-selection-mode 1)
 
 ;; Indent spaces BY DEFAULT
 (setq-default indent-tabs-mode nil)
-
-;; Automatically insert ')' when '(' is inserted
-;; (electric-pair-mode)
 
 ;; Icomplete mode - autocompletion in the minibuffer
 (icomplete-mode 1)
@@ -61,15 +59,14 @@
 ;; Automatically indents current line and previous line when RET is hit
 (electric-indent-mode)
 
-;; Uniquify same-name files
-(toggle-uniquify-buffer-names)
+;; Automatically insert ')' when '(' is inserted
+(electric-pair-mode)
 
-;; If two files d/a1/b/c and d/a2/b/c, give filenames c|a1\b and c|a2\b
+;; Uniquify same-name files. If two files d/a1/b/c and d/a2/b/c, give filenames
+;; c|a1\b and c|a2\b.
+(toggle-uniquify-buffer-names)
 (setq uniquify-buffer-name-style 'post-forward)
 (setq uniquify-strip-common-suffix t)
-
-;; Set fill column to be almost 80
-(setq-default fill-column 79)
 
 ;; Allow use of mouse in terminal (X window)
 (do-if-profile

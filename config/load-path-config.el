@@ -22,3 +22,5 @@
 ;;;;;;;;;;;;;;;
 
 (add-to-list 'load-path "~/.emacs.d/plugins/jdee/lisp")
+
+(provide 'load-path-config)

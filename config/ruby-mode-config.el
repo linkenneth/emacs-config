@@ -1,6 +1,6 @@
-;;;;;;;;;;;;;;;;;;;;;;
-;; Ruby Mode Config ;;
-;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Ruby mode configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Inf-Ruby for IRB Shell ;;
 (autoload 'run-ruby "inf-ruby"
@@ -38,3 +38,5 @@
 (add-to-list 'auto-mode-alist '("Capfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec\\'" . ruby-mode))
+
+(provide 'ruby-mode-config)

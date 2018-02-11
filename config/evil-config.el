@@ -2,22 +2,33 @@
 ;; Evil configuration ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Base vim emulation layer on Emacs
+;; Evil is a Vi emulation layer built on top of Emacs. The main benefit of Evil
+;; is that it combines the best parts of Vi (notably faster movement and
+;; processing of characters) and combines it with the best parts of Emacs
+;; (notably more complex, semantic manipulation of code). Evil also has a
+;; number of plugins to either make Emacs feel more like Vim, or allows me to
+;; use the power of Emacs functions with Vi bindings.
 (package-activate 'evil)
 (require 'evil)
 
-;; Evil-surround (vim controls for 's' commands)
+;; Evil-surround is a plugin that allows manipulating text within (), {}, "",
+;; '' etc. in a Vi-esque way.
 (package-activate 'evil-surround)
 (require 'evil-surround)
 (global-evil-surround-mode 1)
 
-;; Evil-numbers (increment / decrement numbers like in vim)
+;; Evil-numbers is a plugin that allows one to increment / decrement numbers
+;; like in Vim.
 (package-activate 'evil-numbers)
 (require 'evil-numbers)
 
-;; Evil text object between (vim controls for 'i', 'a' commands)
-;; TODO find equivalent in ELPA
-;; (require 'evil-textobj-between)
+;; TODO: consider binding some semantic refactoring commands to Evil bindings
+;; for ease of use
+
+;; TODO: consider changing evil-shift-width on each major mode change to reflect
+;; the specific mode indentation
+
+;; TODO: make evil integration better on certain pages (mostly read-only pages)
 
 ;; End of line visual selection to not include EOL character
 (setq evil-want-visual-char-semi-exclusive t)

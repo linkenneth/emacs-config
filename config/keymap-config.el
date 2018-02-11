@@ -10,20 +10,23 @@
 ;; Unfortunately, corp keybindings should not be shared so they exist in a
 ;; separate configuration not tracked by git.
 
-;; TODO organize this a bit and comment a bit more.
+;; TODO: organize this a bit and comment a bit more.
+
+;; TODO: consider fixing some of these keybindings to trigger on mode changes,
+;; or to delay until the package is loaded. after-init-hook seems okay.
 
 
 ;;;;;;;;;;;;;;;
 ;; Evil Mode ;;
 ;;;;;;;;;;;;;;;
 
-;; Function to undefine Evil commands
 (defun evil-undefine ()
+  "Undefines an Evil command."
  (interactive)
  (let (evil-mode-map-alist)
    (call-interactively (key-binding (this-command-keys)))))
 
-;; j k / k j as ESC Evil Insert Mode
+;; j k / k j as ESC in Evil insert mode
 (define-key evil-insert-state-map "j" #'maybe-exit-jk)
 (define-key evil-insert-state-map "k" #'maybe-exit-kj)
 
@@ -91,6 +94,8 @@
 (define-key helm-command-map (kbd "b") 'helm-mini)
 (global-set-key (kbd "C-x b") 'helm-mini)
 
+;; (global-set-key (kbd "M-x") 'helm-M-x)
+
 ;; General apropos always use helm-apropos
 (global-set-key (kbd "<f1> a") 'helm-apropos)
 (global-set-key (kbd "C-h a") 'helm-apropos)
@@ -111,6 +116,8 @@
 
 (define-key helm-map (kbd "C-z")
   'helm-select-action)  ;; list possible actions using C-z
+(define-key helm-map (kbd "<f1>")
+  'help-command)
 
 ;; Need to specifically define these keys here because generically using
 ;; helm-mode does something strange with comp-read. It rebinds another key-map
@@ -184,3 +191,5 @@
   (define-key 'ruby-mode-map "\C-c\C-c" 'ruby-send-definition-and-go)
   (define-key 'ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent))
 (add-hook 'ruby-mode-hook 'ruby-keys-setup)
+
+(provide 'keymap-config)

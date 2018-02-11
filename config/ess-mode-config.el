@@ -1,6 +1,6 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Emacs Speaks Statistics (ESS Mode Config) ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Emacs Speaks Statistics (ESS) mode configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Only need R-mode at the moment. If other modes are needed add to
 ; auto-mode-alist appropriately.
@@ -16,3 +16,5 @@
   (setq ess-ask-for-ess-directory nil)) ; otherwise you are prompted each time you start an interactive R session
 
 (eval-after-load "ess-site" '(ess-mode-setup))
+
+(provide 'ess-mode-config)

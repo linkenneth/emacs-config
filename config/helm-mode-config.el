@@ -6,6 +6,9 @@
 (require 'helm)
 (require 'helm-config)
 
+;; TODO: see if I can learn to utilize recursive helm, helm-grep, help within
+;; helm, helm-locate, helm-browse-project etc.
+
 ;; Initialize Helm mode. This is for incremental narrowing of M-x, C-x C-f,
 ;; etc., and applies to all Emacs functions that use `completing-read'.
 (helm-mode 1)

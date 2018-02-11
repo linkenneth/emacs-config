@@ -1,6 +1,6 @@
-;;;;;;;;;;;;;;;;;;;;;;
-;; Java Mode Config ;;
-;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Java mode configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun java-mode-setup ()
   (setq c-basic-offset 4))
@@ -33,3 +33,5 @@
 ;;   (setq jde-ecj-command-line-args '("-d" "none" "-1.7")))
 
 (eval-after-load "jde" '(jde-mode-setup))
+
+(provide 'java-mode-config)
