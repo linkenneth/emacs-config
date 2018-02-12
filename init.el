@@ -64,14 +64,11 @@
 
 (require 'helm-mode-config)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Setting up YaSnippet ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; YASnippet configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; TODO until I can figure out how to make Yasnippet work well with
-;; company, no more yasnippet (not that it's been useful).
-
-;; (load "yasnippet-config.el")
+(require 'yasnippet-config)
 
 ;;;;;;;;;;;;;;;;;;
 ;; company-mode ;;

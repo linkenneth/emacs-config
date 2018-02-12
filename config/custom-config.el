@@ -6,7 +6,7 @@
  '(mumamo-chunk-coloring 5)
  '(package-selected-packages
    (quote
-    (company yasnippet-snippets yasnippet evil-numbers evil-surround evil auto-complete helm sass-mode scss-mode js2-mode rjsx-mode haml-mode yaml-mode flycheck-pos-tip color-theme benchmark-init csv-mode jade-mode sr-speedbar stylus-mode scala-mode cython-mode flycheck))))
+    (yasnippet-snippets yasnippet evil-numbers evil-surround evil auto-complete helm sass-mode scss-mode js2-mode rjsx-mode haml-mode yaml-mode flycheck-pos-tip color-theme benchmark-init csv-mode jade-mode sr-speedbar stylus-mode scala-mode cython-mode flycheck))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

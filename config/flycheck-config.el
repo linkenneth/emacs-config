@@ -39,8 +39,14 @@
    ((progn
       (flycheck-list-errors)))))
 
-(eval-after-load 'flycheck
-  (progn
+;; TODO: consider using other keys for these
+(defun flycheck-keys-config ()
+  (global-set-key (kbd "<f9>") 'flycheck-previous-error)
+  (global-set-key (kbd "<f10>") 'flycheck-next-error)
+  (global-set-key (kbd "<f11>") 'flycheck-toggle-error-list-or-mode-off))
+
+(add-hook 'after-init-hook
+  (lambda ()
     ;; Make Flycheck show error in tooltip as opposed to bottom bar
     (package-activate 'flycheck-pos-tip)
     (require 'flycheck-pos-tip)
@@ -49,12 +55,8 @@
     ;; Fix bug with company-mode and flycheck-mode together (this will
     ;; be fixed in 24.5+)
     (when (not (display-graphic-p))
-      (setq flycheck-indication-mode nil))))
+      (setq flycheck-indication-mode nil))
 
-(defun flycheck-keys-config ()
-  (global-set-key (kbd "<f9>") 'flycheck-previous-error)
-  (global-set-key (kbd "<f10>") 'flycheck-next-error)
-  (global-set-key (kbd "<f11>") 'flycheck-toggle-error-list-or-mode-off))
-(flycheck-keys-config)
+    (flycheck-keys-config)))
 
 (provide 'flycheck-config)

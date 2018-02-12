@@ -18,7 +18,7 @@
 (setq inhibit-startup-screen t)
 (setq-default fill-column 80)
 (add-to-list 'default-frame-alist '(height . 50))
-(add-to-list 'default-frame-alist '(width. 90))
+(add-to-list 'default-frame-alist '(width. 100))
 
 ;; Scrolling context lines
 (setq next-screen-context-lines 5)

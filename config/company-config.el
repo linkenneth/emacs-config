@@ -25,7 +25,7 @@
 (package-activate 'company)
 (require 'company)
 
-(add-hook 'after-init-hook 'global-company-mode)
+(global-company-mode)
 
 ;; ;; If on OS X (corp or personal laptop). This setup requires a specific
 ;; ;; installation of ycmd in a location I had determined.
@@ -57,8 +57,16 @@
 ;; TODO: enable more backends? optimize speed?
 ;; TODO: remove unnecessary backends in different modes / buffers?
 
-(eval-after-load 'company
-  (progn
+(defun company-keys-config ()
+  (define-key evil-insert-state-map (kbd "<tab>")
+    'company-indent-or-complete-common)
+  (define-key company-active-map (kbd "C-n") 'company-select-next)
+  (define-key company-active-map (kbd "C-p") 'company-select-previous)
+  ;; TODO C-; doesn't work well in terminal
+  (global-set-key (kbd "C-;") 'company-other-backend))
+
+(add-hook 'after-init-hook
+  (lambda ()
     ;; Only need 2 characters and 0.1 seconds (near-instant) to begin completion
     (setq company-idle-delay 0.1)
     (setq company-minimum-prefix-length 2)
@@ -67,12 +75,7 @@
     ;; if you do any completion action (ie. hit TAB o RET), matching is
     ;; required. This disables it and makes auto-completion completely
     ;; non-intrusive.
-    (setq company-require-match nil)))
-
-(define-key company-mode-map (kbd "TAB") 'company-indent-or-complete-common)
-(define-key company-active-map (kbd "C-n") 'company-select-next)
-(define-key company-active-map (kbd "C-p") 'company-select-previous)
-;; TODO C-; doesn't work well in terminal
-(global-set-key (kbd "C-;") 'company-other-backend)
+    (setq company-require-match nil)
+    (company-keys-config)))
 
 (provide 'company-config)

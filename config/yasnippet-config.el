@@ -1,8 +1,16 @@
-;;;;;;;;;;;;;;;;;;;;;;
-;; YaSnippet Config ;;
-;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; YASnippet configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Template system (paste class definition skeletons etc.)
+;; YASnippet is a template system for Emacs. It speeds up development by
+;; reducing the need for developers to type out boilerplate code manually.
+(package-activate 'yasnippet)
 (require 'yasnippet)
-(setq yas-snippet-dirs "~/.emacs.d/plugins/yasnippet/snippets")
-;; (company-yasnippet)
+
+(yas-global-mode)
+
+(defun yasnippet-keys-config ()
+  (define-key evil-insert-state-map (kbd "<backtab>") 'company-yasnippet))
+(add-hook 'after-init-hook 'yasnippet-keys-config)
+
+(provide 'yasnippet-config)
