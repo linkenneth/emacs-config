@@ -184,13 +184,6 @@
  `(progn (load "google-config.el")))
 
 
-;;;;;;;;;;;;;
-;; Keymaps ;;
-;;;;;;;;;;;;;
-
-(require 'keymap-config)
-
-
 ;;;;;;;;;;;;;;;;;;
 ;; Emacs server ;;
 ;;;;;;;;;;;;;;;;;;

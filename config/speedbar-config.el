@@ -28,4 +28,12 @@
       (sr-speedbar-toggle))
   (sr-speedbar-select-window))
 
+(defun speedbar-keys-config ()
+  (global-set-key (kbd "<f2>") 'sr-speedbar-open-and-select-window)
+  (define-key speedbar-buffers-key-map " " 'scroll-up)
+  (define-key speedbar-file-key-map " " 'scroll-up)
+  (define-key speedbar-buffers-key-map (kbd "DEL") 'scroll-down)
+  (define-key speedbar-file-key-map (kbd "DEL") 'scroll-down))
+(speedbar-keys-config)
+
 (provide 'speedbar-config)

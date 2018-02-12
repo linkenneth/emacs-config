@@ -3,7 +3,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun js-mode-setup ()
-  (setq js-indent-level 2))
+  (setq js-indent-level 2)
+  (setq-local evil-shift-width 2))
 
 (add-hook 'js-mode-hook 'js-mode-setup)
 

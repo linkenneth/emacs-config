@@ -69,4 +69,10 @@
     ;; non-intrusive.
     (setq company-require-match nil)))
 
+(define-key company-mode-map (kbd "TAB") 'company-indent-or-complete-common)
+(define-key company-active-map (kbd "C-n") 'company-select-next)
+(define-key company-active-map (kbd "C-p") 'company-select-previous)
+;; TODO C-; doesn't work well in terminal
+(global-set-key (kbd "C-;") 'company-other-backend)
+
 (provide 'company-config)

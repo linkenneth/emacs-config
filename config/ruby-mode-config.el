@@ -39,4 +39,9 @@
 (add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec\\'" . ruby-mode))
 
+(defun ruby-keys-setup ()
+  (define-key 'ruby-mode-map "\C-c\C-c" 'ruby-send-definition-and-go)
+  (define-key 'ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent))
+(add-hook 'ruby-mode-hook 'ruby-keys-setup)
+
 (provide 'ruby-mode-config)

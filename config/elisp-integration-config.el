@@ -14,4 +14,6 @@
 	(backward-kill-sexp)))
     (insert (format "%s" (eval sexp)))))
 
+(global-set-key (kbd "<f12>") 'eval-and-replace-sexp-at-point)
+
 (provide 'elisp-integration-config)

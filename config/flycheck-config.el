@@ -51,4 +51,10 @@
     (when (not (display-graphic-p))
       (setq flycheck-indication-mode nil))))
 
+(defun flycheck-keys-config ()
+  (global-set-key (kbd "<f9>") 'flycheck-previous-error)
+  (global-set-key (kbd "<f10>") 'flycheck-next-error)
+  (global-set-key (kbd "<f11>") 'flycheck-toggle-error-list-or-mode-off))
+(flycheck-keys-config)
+
 (provide 'flycheck-config)

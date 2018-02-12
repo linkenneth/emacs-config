@@ -14,7 +14,6 @@
   ;; files I work with...
   (setq flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
 
-
 (add-hook 'emacs-lisp-mode-hook 'emacs-lisp-mode-setup)
 
 (provide 'elisp-mode-config)
