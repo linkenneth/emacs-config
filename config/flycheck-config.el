@@ -2,6 +2,10 @@
 ;; Flycheck Config ;;
 ;;;;;;;;;;;;;;;;;;;;;
 
+;; TODO: consider removing YCMD (see completions-config)
+;; TODO: consider using more powerful per-mode checkers. Use
+;; flycheck-verify-setup to see what modes are available.
+
 ;; All except corp desktop
 (do-if-not-profile
  '(:linux :corp :desktop)

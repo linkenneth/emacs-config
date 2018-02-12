@@ -39,7 +39,7 @@
     (add-to-list 'profile-config--profiles :mac-osx))
 
 ;; Google Corp
-(if (s-suffix? ".corp.google.com" system-name)
+(if (s-suffix? ".corp.google.com" (system-name))
     (add-to-list 'profile-config--profiles :corp))
 
 ;; GNU / Linux Desktop

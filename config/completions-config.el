@@ -4,14 +4,16 @@
 
 ;; There are many libraries at work together here, so let's try to explain.
 
-
 ;; Company-mode (complete-any mode) is a completion middle-ware, a frontend, and
 ;; a few backends sources. Using it gives clean autocompletion for a variety of
 ;; modes. However, it itself comes with only a few limited backends.
 
 ;; YCMD (YouCompleteMeDaemon) is a server for autocompletion that works with any
 ;; language, with built-in semantic parsing for C++, Java, JavaScript, Python,
-;; and Go. YCMD is also used for Flycheck syntax checking (see flycheck-config).
+;; and Go. These language-specific plugins themselves use a number of external,
+;; language-specific parsers (like Jedi and Tern), so in a way YCMD is also a
+;; completion middle-ware. YCMD is also used for Flycheck syntax checking (see
+;; flycheck-config).
 
 ;; Company-mode supplies the frontend for completions, while YCMD's superior
 ;; parsing is used as a backend to company-mode. While company-mode completion
@@ -35,6 +37,12 @@
    (add-hook 'after-init-hook 'global-company-mode)
    (add-hook 'prog-mode-hook 'ycmd-mode)))
 
+;; TODO: consider carefully whether we even need YCMD? YCMD mainly provides an
+;; non-semantic identifier engine (which is covered by company and semantic
+;; modes already) as well as an API for other semantic engines (most of which
+;; have native company modes anyways). Flycheck also uses YCMD but flycheck has
+;; much more extensive lint-only analyzers as well. What is the purpose, then,
+;; of YCMD, except as another layer of middle-ware?
 ;; TODO: can we merge backend lists?
 ;; TODO: can we add some language-aware lists?
 ;; TODO: remove completion in shell or at least make it so it doesn't interfere
