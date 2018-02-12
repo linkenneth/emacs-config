@@ -58,6 +58,10 @@
 (define-key evil-insert-state-map (kbd "C-k") 'evil-undefine)
 (define-key evil-motion-state-map (kbd "C-k") 'evil-undefine)
 
+;; M-. for go-to-definition like normal
+(define-key evil-motion-state-map (kbd "M-.") 'evil-undefine)
+(define-key evil-normal-state-map (kbd "M-.") 'evil-undefine)
+
 ;; M-n and M-p act like C-n and C-p in command mode
 (define-key evil-ex-completion-map (kbd "M-n") #'next-complete-history-element)
 (define-key evil-ex-completion-map (kbd "M-p") #'previous-complete-history-element)
@@ -194,5 +198,6 @@
   (define-key 'ruby-mode-map "\C-c\C-c" 'ruby-send-definition-and-go)
   (define-key 'ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent))
 (add-hook 'ruby-mode-hook 'ruby-keys-setup)
+
 
 (provide 'keymap-config)

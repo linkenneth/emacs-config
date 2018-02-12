@@ -4,6 +4,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/config")
 (require 'load-path-config)
+(require 'environment-config)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
