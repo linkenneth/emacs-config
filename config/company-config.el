@@ -1,6 +1,6 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Company and YCMD Config ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; company-mode configuration ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; There are many libraries at work together here, so let's try to explain.
 
@@ -20,29 +20,36 @@
 ;; is strong by itself already, it is really YCMD that makes completion easy in
 ;; a large number of different scenarios.
 
-;; If on OS X (corp or personal laptop). This setup requires a specific
-;; installation of ycmd in a location I had determined.
-(do-if-profile
- :mac-osx
- `(progn
-   (package-activate 'company-ycmd)
-   (require 'company-ycmd)
-   (set-variable 'ycmd-server-command
-                 '("python" "/usr/local/lib/ycmd/ycmd/__main__.py"))
-   (set-variable 'ycmd-server-args
-                 '("--log=warning" "--keep_logfile"
-                   "--idle_suicide_seconds=108000"))
+(require 'package)
 
-   (company-ycmd-setup)
-   (add-hook 'after-init-hook 'global-company-mode)
-   (add-hook 'prog-mode-hook 'ycmd-mode)))
+(package-activate 'company)
+(require 'company)
 
+(add-hook 'after-init-hook 'global-company-mode)
+
+;; ;; If on OS X (corp or personal laptop). This setup requires a specific
+;; ;; installation of ycmd in a location I had determined.
+;; (do-if-profile
+;;  :mac-osx
+;;  `(progn
+;;    (package-activate 'company-ycmd)
+;;    (require 'company-ycmd)
+;;    (set-variable 'ycmd-server-command
+;;                  '("python" "/usr/local/lib/ycmd/ycmd/__main__.py"))
+;;    (set-variable 'ycmd-server-args
+;;                  '("--log=warning" "--keep_logfile"
+;;                    "--idle_suicide_seconds=108000"))
+
+;;    (company-ycmd-setup)
+;;    (add-hook 'after-init-hook 'global-company-mode)
+;;    (add-hook 'prog-mode-hook 'ycmd-mode)))
 ;; TODO: consider carefully whether we even need YCMD? YCMD mainly provides an
 ;; non-semantic identifier engine (which is covered by company and semantic
 ;; modes already) as well as an API for other semantic engines (most of which
 ;; have native company modes anyways). Flycheck also uses YCMD but flycheck has
 ;; much more extensive lint-only analyzers as well. What is the purpose, then,
 ;; of YCMD, except as another layer of middle-ware?
+
 ;; TODO: can we merge backend lists?
 ;; TODO: can we add some language-aware lists?
 ;; TODO: remove completion in shell or at least make it so it doesn't interfere
@@ -50,7 +57,7 @@
 ;; TODO: enable more backends? optimize speed?
 ;; TODO: remove unnecessary backends in different modes / buffers?
 
-(eval-after-load 'company-ycmd
+(eval-after-load 'company
   (progn
     ;; Only need 2 characters and 0.1 seconds (near-instant) to begin completion
     (setq company-idle-delay 0.1)
@@ -62,4 +69,4 @@
     ;; non-intrusive.
     (setq company-require-match nil)))
 
-(provide 'completions-config)
+(provide 'company-config)

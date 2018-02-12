@@ -7,16 +7,19 @@
 ;; flycheck-verify-setup to see what modes are available.
 
 ;; All except corp desktop
-(do-if-not-profile
- '(:linux :corp :desktop)
- `(progn
-    (package-activate 'flycheck-ycmd)
-    (require 'flycheck-ycmd)
-    (flycheck-ycmd-setup)
-    (add-hook 'prog-mode-hook 'flycheck-mode)))
+(package-activate 'flycheck)
+(require 'flycheck)
 
-;; Use the current load path to find symbols in elisp-mode
-(setq flycheck-emacs-lisp-load-path 'inherit)
+(add-hook 'prog-mode-hook 'flycheck-mode)
+
+;; ;; All except corp desktop
+;; (do-if-not-profile
+;;  '(:linux :corp :desktop)
+;;  `(progn
+;;     (package-activate 'flycheck-ycmd)
+;;     (require 'flycheck-ycmd)
+;;     (flycheck-ycmd-setup)
+;;     (add-hook 'prog-mode-hook 'flycheck-mode)))
 
 ;; Toggles the Flycheck error list as well as flycheck-mode itself on
 ;; and off; see keymap.el

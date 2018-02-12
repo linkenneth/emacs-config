@@ -81,15 +81,15 @@
 ;; (load "yasnippet-config.el")
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Setting up Company-YCMD Mode ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;
+;; company-mode ;;
+;;;;;;;;;;;;;;;;;;
 
-(require 'completions-config)
+(require 'company-config)
 
 
 ;;;;;;;;;;;;;;;;;;;
-;; Flycheck Mode ;;
+;; flycheck-mode ;;
 ;;;;;;;;;;;;;;;;;;;
 
 (require 'flycheck-config)
