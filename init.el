@@ -6,20 +6,17 @@
 (require 'load-path-config)
 (require 'environment-config)
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Profile configuration ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'profile-config)
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Package configuration ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'package-config)
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Initialization benchmarking ;;
@@ -48,13 +45,11 @@
 ;; TODO: figure out if Semantic's SymRef (C-c , g) conflicts with Grok
 (require 'semantic-config)
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Evil configuration ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'evil-config)
-
 
 ;;;;;;;;;;;;;;;;;;;;
 ;; Setup IDO mode ;;
@@ -63,13 +58,11 @@
 ;; Temporarily turn off IDO mode to try out Helm mode
 ;; (load "ido-config.el")
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Helm mode configuration ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'helm-mode-config)
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting up YaSnippet ;;
@@ -80,13 +73,11 @@
 
 ;; (load "yasnippet-config.el")
 
-
 ;;;;;;;;;;;;;;;;;;
 ;; company-mode ;;
 ;;;;;;;;;;;;;;;;;;
 
 (require 'company-config)
-
 
 ;;;;;;;;;;;;;;;;;;;
 ;; flycheck-mode ;;
@@ -94,14 +85,12 @@
 
 (require 'flycheck-config)
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Elisp Integration into Editing ;;
+;; Elisp integration into editing ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; TODO make this work anywhere in the sexp
 (require 'elisp-integration-config)
-
 
 ;;;;;;;;;;;;;;;;
 ;; CamelScore ;;
@@ -110,13 +99,11 @@
 ;; TODO make the keybindings work in terminal
 (load "camel-score-config.el")
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; Tramp Mode Config ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'tramp-config)
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Various major modes ;;
@@ -168,7 +155,6 @@
 ;; Scala mode
 (require 'scala-mode-config)
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Various OS-specific Configs ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -182,7 +168,6 @@
 (do-if-profile
  '(:linux :corp :desktop)
  `(progn (load "google-config.el")))
-
 
 ;;;;;;;;;;;;;;;;;;
 ;; Emacs server ;;

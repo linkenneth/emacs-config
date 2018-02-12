@@ -7,5 +7,6 @@
 ;; to have paths correct, and import from there.
 
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+(add-to-list 'exec-path "/usr/local/bin")
 
 (provide 'environment-config)

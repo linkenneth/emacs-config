@@ -24,7 +24,7 @@
 (global-evil-surround-mode 1)
 
 ;; Evil-numbers is a plugin that allows one to increment / decrement numbers
-;; like in Vim.
+;; like in Vim. Very useful in combination with macros.
 (package-activate 'evil-numbers)
 (require 'evil-numbers)
 
