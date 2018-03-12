@@ -118,7 +118,13 @@
   (define-key evil-motion-state-map (kbd "\\") 'evil-switch-to-windows-last-buffer)
 
   ;; C-\ to switch to other window (same as C-x o)
-  (define-key evil-motion-state-map (kbd "C-\\") 'other-window))
+  (define-key evil-motion-state-map (kbd "C-\\") 'other-window)
+
+  ;; vim-surround (which evil-surround is based on) changed their bindings from
+  ;; s -> S and S -> gS. This was thus changed in evil-surround as well. I would
+  ;; like to keep my original bindings, so rebind the old bindings here.
+  (evil-define-key 'visual evil-surround-mode-map "s" 'evil-surround-region)
+  (evil-define-key 'visual evil-surround-mode-map "S" 'evil-Surround-region))
 
 (evil-mode 1)
 (evil-keys-config)

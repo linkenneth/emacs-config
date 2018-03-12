@@ -106,7 +106,6 @@
 ;; Various major modes ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Markup modes
 ;; (require 'tex-config)
 (require 'text-mode-config)
 ;; (require 'jade-mode-config)
@@ -115,41 +114,18 @@
 ;; (require 'yaml-mode-config)
 ;; (require 'sass-mode-config)
 ;; (require 'scss-mode-config)
-
-;; Emacs Lisp mode
-(require 'elisp-mode-config)
-
-;; C mode
-(require 'c-mode-config)
-
-;; Python mode
-(require 'python-mode-config)
-
-;; Cython mode
-(require 'cython-mode-config)
-
-;; Ruby mode
-(require 'ruby-mode-config)
-
-;; Java mode
-(require 'java-mode-config)
-
-;; Emacs Speaks Statistics (ESS mode)
-(require 'ess-mode-config)
-
-;; js-mode
-(require 'js-mode-config)
-
-;; js2-mode (enhanced JS mode)
-(require 'js2-mode-config)
-
-;; ReactJS / JSX mode
-(require 'rjsx-mode-config)
-
-;; CSV mode
+(require 'css-mode-config)
 (require 'csv-mode-config)
-
-;; Scala mode
+(require 'elisp-mode-config)
+(require 'c-mode-config)
+(require 'python-mode-config)
+(require 'cython-mode-config)
+(require 'ruby-mode-config)
+(require 'java-mode-config)
+(require 'ess-mode-config)
+(require 'js-mode-config)
+(require 'js2-mode-config)
+(require 'rjsx-mode-config)
 (require 'scala-mode-config)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
