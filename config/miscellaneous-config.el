@@ -60,7 +60,9 @@
 (electric-indent-mode)
 
 ;; Automatically insert ')' when '(' is inserted
-(electric-pair-mode)
+;; Disabled because annoying for HTML, and not used to it. If this is something
+;; we can fix then maybe reconsider.
+;; (electric-pair-mode)
 
 ;; Uniquify same-name files. If two files d/a1/b/c and d/a2/b/c, give filenames
 ;; c|a1\b and c|a2\b.

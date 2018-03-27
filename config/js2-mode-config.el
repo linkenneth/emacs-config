@@ -10,4 +10,9 @@
 ;; (ie. implicitly returning undefined).
 (setq-default js2-strict-inconsistent-return-warning nil)
 
+;; Assume these variables are always defined globally, and even if not, let more
+;; advanced syntax checker check this.
+(setq js2-global-externs
+      '("setTimeout" "setInterval" "clearTimeout" "clearInterval"))
+
 (provide 'js2-mode-config)
