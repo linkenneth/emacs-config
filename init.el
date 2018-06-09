@@ -115,6 +115,7 @@
 ;; (require 'sass-mode-config)
 ;; (require 'scss-mode-config)
 (require 'css-mode-config)
+(require 'less-css-mode-config)
 (require 'csv-mode-config)
 (require 'elisp-mode-config)
 (require 'c-mode-config)

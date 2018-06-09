@@ -60,9 +60,9 @@
 (electric-indent-mode)
 
 ;; Automatically insert ')' when '(' is inserted
-;; Disabled because annoying for HTML, and not used to it. If this is something
-;; we can fix then maybe reconsider.
-;; (electric-pair-mode)
+;; TODO: for rjsx-mode, something weird happens to JSX. I don't think it's due
+;; to this.
+(electric-pair-mode)
 
 ;; Uniquify same-name files. If two files d/a1/b/c and d/a2/b/c, give filenames
 ;; c|a1\b and c|a2\b.

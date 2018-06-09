@@ -18,6 +18,7 @@
  (add-to-list 'gnutls-trustfiles "/usr/local/etc/openssl/cert.pem"))
 
 ;; Initialize ELPA, but don't activate packages until later.
-(package-initialize t)
+;; (package-initialize t)
+(package-initialize)
 
 (provide 'package-config)
